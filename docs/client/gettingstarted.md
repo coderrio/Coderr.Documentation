@@ -5,12 +5,12 @@ If you have not done it yet, you can download one of our libraries from [nuget](
 
 Name | Description
 --- | -----
-OneTrueError | Our reporting library, allows you to manually report exceptions.
-OneTrueError.aspnet | Generic ASP.NET library. Catches all unhandled exceptions and report them. Collects information about the HTTP request, session data etc. Allows you to easily create custom error pages for different HTTP error codes.
-OneTrueError.mvc5 | ASP.NET MVC5 specific library. Does the same as the ASP.NET library, but do also collect specific MVC5 information like route data, viewbag etc. Also allows you to customize your error pages by just creating them in the correct folder.
-OneTrueError.wcf | Catches unhandled exceptions in the WCF pipeline. Collects WCF specific information like the inbound WCF message that failed to be processed.
-OneTrueError.log4net | Reports all exceptions that you log, including the error message that you wrote.
-OneTrueError.winforms | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
+OneTrueError.client | Our reporting library, allows you to manually report exceptions.
+OneTrueError.client.aspnet | Generic ASP.NET library. Catches all unhandled exceptions and report them. Collects information about the HTTP request, session data etc. Allows you to easily create custom error pages for different HTTP error codes.
+OneTrueError.client.mvc5 | ASP.NET MVC5 specific library. Does the same as the ASP.NET library, but do also collect specific MVC5 information like route data, viewbag etc. Also allows you to customize your error pages by just creating them in the correct folder.
+OneTrueError.client.wcf | Catches unhandled exceptions in the WCF pipeline. Collects WCF specific information like the inbound WCF message that failed to be processed.
+OneTrueError.client.log4net | Reports all exceptions that you log, including the error message that you wrote.
+OneTrueError.client.winforms | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
 
 When you have installed the library you need to activate it. It's done with the help of the appKey/Shared secret that you get once you create an account at our [homepage](http://onetrueerror.com/account/register).
 

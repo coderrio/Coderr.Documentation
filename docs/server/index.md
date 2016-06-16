@@ -3,7 +3,7 @@ Server development
 
 This section is dedicated to server development with focus on how new features can be implemented.
 
-* [Server API](http://onetrueerror.com/documentation/api/server)
+* [Server API](http://onetrueerror.com/docs/api/server)
 * [Installation guide](installation.md)
 
 # Core concepts

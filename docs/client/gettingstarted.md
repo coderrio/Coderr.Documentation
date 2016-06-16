@@ -1,38 +1,37 @@
 Getting started
 ================
 
-If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client):
+If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client).
 
-Name | Description
---- | -----
-OneTrueError.client | Our reporting library, allows you to manually report exceptions.
-OneTrueError.client.aspnet | Generic ASP.NET library. Catches all unhandled exceptions and report them. Collects information about the HTTP request, session data etc. Allows you to easily create custom error pages for different HTTP error codes.
-OneTrueError.client.mvc5 | ASP.NET MVC5 specific library. Does the same as the ASP.NET library, but do also collect specific MVC5 information like route data, viewbag etc. Also allows you to customize your error pages by just creating them in the correct folder.
-OneTrueError.client.wcf | Catches unhandled exceptions in the WCF pipeline. Collects WCF specific information like the inbound WCF message that failed to be processed.
-OneTrueError.client.log4net | Reports all exceptions that you log, including the error message that you wrote.
-OneTrueError.client.winforms | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
+-------------
 
-When you have installed the library you need to activate it. It's done with the help of the appKey/Shared secret that you get once you create an account at our [homepage](http://onetrueerror.com/account/register).
+The first thing you need to do is to tell where the uploads should be sent and which application the reports are for.
+The URL should point on your local [server installation](http://onetrueerror.com/download/server). Once installed you can configure
+one or more applications. By doing so you will also get an appKey and sharedSecret that you can use to configure this library.
+
+Once the above steps are completed you can configure the library like this:
 
 ```csharp
-var uri = new Uri("http://yourOneTrueErrorServer");
-OneTrue.Configuration.Credentials(uri, "appKey", "sharedSecret");
+var url = new Uri("http://yourServer/onetrueerror/");
+OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 ```
 
-Once done you can report your first exception using something like this:
+The easiest way to report an exception is like this:
 
 ```csharp
 try
 {
-    //some stuff that generates an exception
+    somelogic();
 }
-catch (Exception ex)
+catch(SomeException ex)
 {
-    OneTrue.Report(ex);
+	OneTrue.Report(ex);
 }
 ```
 
-The exception should appear in our web moments after you reported it.
+The exception should appear in your server installation shortly after being reported.
+
+![](screenshot.png)
 
 ## Attaching context information
 
@@ -53,6 +52,8 @@ catch (Exception ex)
 }
 ```
 
+### Using anonymous object
+
 If you need to attach multiple values you can use an anonymous object:
 
 ```csharp
@@ -66,7 +67,16 @@ catch (Exception ex)
 }
 ```
 
+**Result**
+
+![](anonymous-object.png)
+
+### Custom collections
+
 We also have an object overload which can transform any object into a context collection (one of the groups in the "Context Data" menu in our web site).
+
+Below we are using `ToContextCollection()` extension method which can transform any object (including complex objects) into a context collection.
+
 
 ```csharp
 try
@@ -80,6 +90,10 @@ catch (Exception ex)
     OneTrue.Report(ex, new[]{modelCollection, loggedInUser});
 }
 ```
+
+**Result**
+
+![](attach_multiple_collections.png)
 
 Hence you can easily attach and group your information just as you like.
 
@@ -99,3 +113,10 @@ catch (Exception ex)
 }
 ```
 
+**Result:**
+
+![](tag-demo.png)
+
+# More information
+
+You can read more about the features for the specific libraries from the [client start page](index.md)

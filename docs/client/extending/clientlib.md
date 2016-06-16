@@ -97,5 +97,5 @@ public class AspNetContext : IErrorReporterContext
 }
 ```
 
-The important thing to remember is that the custom context is only included when `OneTrue.GenerateReport` is invoked from your extension point. When exceptions are manually reportet it's typically not used. Thus make sure that you can handle that in your context providers.
+The important thing to remember is that the custom context is only included when `OneTrue.GenerateReport` is invoked from your extension point. When exceptions are manually reported it's typically not used. Thus make sure that you can handle that in your context providers.
 

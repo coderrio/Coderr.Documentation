@@ -13,10 +13,10 @@ OneTrue.Configuration.CatchLog4NetExceptions();
 
 It must be added after the log4net configuration, but before the first usage of `LogManager.GetLogger()`.
 
-*(this library requires that you have installed a OneTrueError server somewhere)*
 
 ## More information
 
-* [log4net client](index.md)
-* [Client reporting](../index.md)
-* [Server guide](../../server.md)
+* [Client configuration](index.md)
+* [Client API reference](http://onetrueerror.com/docs/api/client/log4net/)
+* [Getting started guide](../../gettingstarted.md)
+* [Install OneTrueError server](http://onetrueerror.com/download/server/)

@@ -12,10 +12,9 @@ OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 OneTrue.Configuration.CatchAspNetExceptions();
 ```
 
-*(this library requires that you have installed a OneTrueError server somewhere)*
-
 ## More information
 
-* [ASP.NET client](index.md)
-* [Client reporting](../index.md)
-* [Server guide](../../server.md)
+* [ASP.NET client configuration](index.md)
+* [ASP.NET client API reference](http://onetrueerror.com/docs/api/client/aspnet/)
+* [Getting started guide](../../gettingstarted.md)
+* [Install OneTrueError server](http://onetrueerror.com/download/server/)

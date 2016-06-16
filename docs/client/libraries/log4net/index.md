@@ -1,7 +1,7 @@
 log4net integration
 ================
 
-The log4net library injects OneTrueError into the logging pipeline of log4net. Each time you log something and include an exception it will be reported to OneTrueError. This is by far the easiest way to use the power of OneTrueError in legacy applizations (which use OneTrueError).
+The log4net library injects OneTrueError into the logging pipeline of log4net. Each time you log something and include an exception it will be reported to OneTrueError. This is by far the easiest way to use the power of OneTrueError in legacy applizations (which use log4net).
 
 # Setup
 
@@ -37,3 +37,8 @@ catch (Exception ex)
 As a bonus you will also see information about the log entry in OneTrueError:
 
 ![](contextinfo.png)
+
+# Links
+
+* [Client API reference](http://onetrueerror.com/docs/api/client/log4net/)
+* [Getting started guide](../../gettingstarted.md)

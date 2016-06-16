@@ -5,4 +5,5 @@ This library is the foundation of all exception reporting done with OneTrueError
 
 ## More information
 
-[Client usage](../../index.md)
+* [Client API reference](http://onetrueerror.com/docs/api/client/)
+* [Getting started guide](../../gettingstarted.md)

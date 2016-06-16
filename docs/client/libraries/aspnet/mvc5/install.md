@@ -15,11 +15,10 @@ OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 OneTrue.Configuration.CatchMvcExceptions();
 ```
 
-*(this library requires that you have installed a OneTrueError server somewhere)*
-
 
 ## More information
 
-* [More information](index.md)
-* [General client reporting](../index.md)
-* [Installing OneTrueError](http://onetrueerror.com/download/server/)
+* [Client configuration](index.md)
+* [Client API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
+* [Getting started guide](../../gettingstarted.md)
+* [Install OneTrueError server](http://onetrueerror.com/download/server/)

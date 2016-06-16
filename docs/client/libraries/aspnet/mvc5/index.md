@@ -66,3 +66,10 @@ ViewBag.Model = new
 Result:
 
 ![](collections/viewdata.png)
+
+
+# Links
+
+* [Client API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
+* [Getting started guide](../../gettingstarted.md)
+

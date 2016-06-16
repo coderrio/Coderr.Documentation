@@ -1,9 +1,8 @@
-Client library documentation.
+Client library documentation
 ============
 
 Welcome to the OneTrueError client library documentation.
 
-* [Client API reference](http://onetrueerror.com/docs/api/client)
 * [Getting started](gettingstarted.md)
 * [Extending](extending/)
 
@@ -18,4 +17,3 @@ Name | Description
 OneTrueError.client.wcf | Catches unhandled exceptions in the WCF pipeline. Collects WCF specific information like the inbound WCF message that failed to be processed.
 [OneTrueError.client.log4net](libraries/log4net/index.md) | Reports all exceptions that you log, including the error message that you wrote.
 OneTrueError.client.winforms | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
-

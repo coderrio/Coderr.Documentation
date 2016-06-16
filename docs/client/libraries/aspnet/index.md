@@ -63,3 +63,8 @@ If you are just using HTML you can use the following template strings:
 |------|----|----|
 |`{ErrorMessage}` | Exception message |
 -------------------------------
+
+# Links
+
+* [Client API reference](http://onetrueerror.com/docs/api/client/aspnet/)
+* [Getting started guide](../../gettingstarted.md)

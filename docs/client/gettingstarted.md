@@ -1,13 +1,17 @@
 Getting started
 ================
 
-If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client).
+Welcome to the getting started guide.
 
--------------
+## Presequites
+
+* If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client).
+*  [Install](../server/installation.md) the server.
+
+## Using the client library
 
 The first thing you need to do is to tell where the uploads should be sent and which application the reports are for.
-The URL should point on your local [server installation](http://onetrueerror.com/download/server). Once installed you can configure
-one or more applications. By doing so you will also get an appKey and sharedSecret that you can use to configure this library.
+The URL should point on your local server installation. The appKey and sharedSecret can be found in your OneTrueError server web site.
 
 Once the above steps are completed you can configure the library like this:
 

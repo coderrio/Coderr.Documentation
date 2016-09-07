@@ -25,7 +25,7 @@ Examples:
 
 ![only details](winforms_error_details.png)
 
-![only email](winforms_error_feedback.png)
+![only email](winforms_error_email.png)
 
 ## Context information
 
@@ -54,3 +54,9 @@ OneTrue.Configuration.TakeScreenshots();
 The context collection will be shown as:
 
 ![](winforms_screenshots.png)
+
+# Links
+
+* [WinForms API reference](http://onetrueerror.com/docs/api/client/winforms)
+* [Getting started guide](../../gettingstarted.md)
+* [Server installation](http://onetrueerror.com/documentation/server/installation.md)

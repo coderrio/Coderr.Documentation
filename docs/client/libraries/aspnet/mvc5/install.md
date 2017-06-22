@@ -18,7 +18,7 @@ OneTrue.Configuration.CatchMvcExceptions();
 
 ## More information
 
-* [Client configuration](index.md)
-* [Client API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
-* [Getting started guide](../../gettingstarted.md)
+* [ASP.NET MVC configuration](index.md)
+* [ASP.NET MVC API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
+* [Getting started guide](../../../gettingstarted.md)
 * [Install OneTrueError server](http://onetrueerror.com/download/server/)

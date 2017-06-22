@@ -160,6 +160,5 @@ Result:
 
 # Links
 
-* [Client API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
-* [Getting started guide](../../gettingstarted.md)
-
+* [ASP.NET MVC5 API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
+* [Getting started guide](../../../gettingstarted.md)

@@ -1,10 +1,20 @@
 ﻿OneTrueError documentation
 ===============
 
-This documentation is divided into two sections:
+The documentation is divided into two sections.
+Both sections contains information about how you can contribute to OneTrueError and how you can adapt/integrate with OTE.
 
-* [Client documentation](client/index.md)
-* [Server documentation](server/index.md)
+# Client documentation
+
+Information about how you can download, configure and use OneTrueError within our application.
+
+[Client documentation](client/index.md)
+
+# Server documentation
+
+Information about how you can install and configure the server that receives and analyses all error reports.
+
+[Server documentation](server/index.md)
 
 # OneTrueError pipeline
 

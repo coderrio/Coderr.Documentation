@@ -1,17 +1,16 @@
 Getting started
 ================
 
-Welcome to the getting started guide.
+# Presequites
 
-## Presequites
+If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client).
 
-* If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client).
-*  [Install](../server/installation.md) the server.
+You need to either use our [hosted service](https://app.onetrueerror.com) or [install](../server/installation.md) the open source server. Unsure of which one you should use? Check our [edition comparison](https://onetrueerror.com/editions/compare).
 
 ## Using the client library
 
 The first thing you need to do is to tell where the uploads should be sent and which application the reports are for.
-The URL should point on your local server installation. The appKey and sharedSecret can be found in your OneTrueError server web site.
+The URL should either point on your local server installation or `https://report.onetrueerror.com`. The appKey and sharedSecret can be found in your OneTrueError account.
 
 Once the above steps are completed you can configure the library like this:
 
@@ -36,6 +35,18 @@ catch(SomeException ex)
 The exception should appear in your server installation shortly after being reported.
 
 ![](screenshot.png)
+
+### Automation
+
+Automated exception handling is used by the framework specific activation method (depends on which nuget package you installed). 
+
+Examples:
+
+* `OneTrue.Configration.CatchWinFormsExceptions();`
+* `OneTrue.Configration.CatchWinApiExceptions();`
+* `OneTrue.Configration.CatchMvcExceptions();`
+* `OneTrue.Configration.CatchAdoNetExceptions();`
+
 
 ## Attaching context information
 
@@ -123,4 +134,4 @@ catch (Exception ex)
 
 # More information
 
-You can read more about the features for the specific libraries from the [client start page](index.md)
+Each nuget library has its own unique features. You can find the documentation on the [client start page](index.md).

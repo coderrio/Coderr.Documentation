@@ -8,11 +8,12 @@ This section is dedicated to server development with focus on how new features c
 
 # Core concepts
 
-The server is based on CQRS, with the exception that the read/write models have not yet been separated. Events drive changes
-in different parts of the system. Each namespace in the App/Core and App/Modules root namespaces should be considered to be
+The server is based on CQRS, with the exception that the read/write models have not yet been separated two own databases. 
+
+Events drive changes in different parts of the system. Each namespace in the App/Core and App/Modules root namespaces should be considered to be
 isolated domains. They may NOT use functionality from other domains by using anything else than the public CQRS API (i.e. Commands/Queries/Events).
 
-Although the test coverage is poor today, the goal is to improve coverage a lot during all future development. All new features should also be covered by tests.
+Although the test coverage is poor today, the goal is to improve coverage in all future development. All new features should also be covered by tests.
 Thus all classes must be testable
 which means that dependencies should be injected. All classes should in most cases also depend on abstractions and not concrete implementations.
 Tests should be written to prove that the code fulfil the functional requirements (and not to prove that the code works as it was originally written). Thus

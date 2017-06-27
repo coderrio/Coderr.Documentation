@@ -1,13 +1,21 @@
 Client library documentation
 ============
 
-Welcome to the OneTrueError client library documentation.
+# Getting started
 
-* [Getting started](gettingstarted.md)
-* [Extending](extending/)
+Learn how you can use the client libraries once you have installed and configured them.
 
+[Getting started](gettingstarted.md)
+
+# Extending
+
+Learn how you can create your own context collections are build your own client library.
+
+[Extending](extending/)
 
 # Integration libraries
+
+The following nuget packages are available.
 
 Name | Description
 --- | -----

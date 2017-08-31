@@ -1,0 +1,17 @@
+{
+    "language": "en",
+    "documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "groupDictionaries": true,
+    "statusBarIndicator": true,
+    "suggestionsInHints": true,
+    "addToSystemDictionary": false,
+    "ignoreRegExps": [],
+    "ignoreFiles": [],
+    "notificationClass": "error",
+    "spellContext": "body comments strings",
+    "spellContextByClass": {}
+}

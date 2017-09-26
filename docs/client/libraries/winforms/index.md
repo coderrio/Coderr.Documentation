@@ -33,7 +33,7 @@ WinForms have to built in context collections
 
 ### OpenForms
 
-OneTrueError collects information from all open forms using reflection. 
+codeRR collects information from all open forms using reflection. 
 
 The information includes all controls and their configuration (position, content, visibility etc)
 
@@ -57,6 +57,6 @@ The context collection will be shown as:
 
 # Links
 
-* [WinForms API reference](http://onetrueerror.com/docs/api/client/winforms)
+* [WinForms API reference](http://coderrapp.com/docs/api/client/winforms)
 * [Getting started guide](../../gettingstarted.md)
-* [Server installation](http://onetrueerror.com/documentation/server/installation.md)
+* [Server installation](http://coderrapp.com/documentation/server/installation.md)

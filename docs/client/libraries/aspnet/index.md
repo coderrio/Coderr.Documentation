@@ -5,12 +5,12 @@ This library is intended for ASP.NET projects that are not using MVC.
 
 # Setup
 
-You need to have installed the OneTrueError server somewhere and created an application in it. Once you've done that you'll have a `appKey` and a `sharedSecret` which you can configure below.
+You need to have installed the codeRR server somewhere and created an application in it. Once you've done that you'll have a `appKey` and a `sharedSecret` which you can configure below.
 
 Add the following code in `global.asax`:
 
 ```
-var url = new Uri("http://yourServer/onetrueerror");
+var url = new Uri("http://yourServer/coderr");
 OneTrue.Configuration.Credentials(url, "13d82df603a845c7a27164c4fec19dd6", "6f0a0a7fac6d42caa7cc47bb34a6520b");
 OneTrue.Configuration.CatchAspNetExceptions();
 ```
@@ -101,7 +101,7 @@ public partial class NotFound : System.Web.UI.Page
 Then simnply display the error information in your HTML:
 
 ```csharp
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NotFound.aspx.cs" Inherits="OneTrueError.Client.AspNet.Demo.Errors.NotFound" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NotFound.aspx.cs" Inherits="codeRR.Client.AspNet.Demo.Errors.NotFound" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -144,7 +144,7 @@ If you are just using HTML you can use the following template strings:
     <meta charset="utf-8" />
     <title>An error occurred</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-    <meta name="X-powered-with" content="http://onetrueerror.com" />
+    <meta name="X-powered-with" content="http://coderrapp.com" />
     <style type="text/css">
         /*CssStyles*/
     </style>
@@ -156,7 +156,7 @@ If you are just using HTML you can use the following template strings:
         </div>
         <form method="post" action="$URL$">
             <div class="img">
-                <img src="https://onetrueerror.com/images/WebError2.jpg" />
+                <img src="https://coderrapp.com/images/WebError2.jpg" />
             </div>
             <div class="content">
                 <p>
@@ -192,5 +192,5 @@ If you are just using HTML you can use the following template strings:
 
 # Links
 
-* [ASP.NET API reference](http://onetrueerror.com/docs/api/client/aspnet/)
+* [ASP.NET API reference](http://coderrapp.com/docs/api/client/aspnet/)
 * [Getting started guide](../../gettingstarted.md)

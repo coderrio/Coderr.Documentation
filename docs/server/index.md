@@ -3,7 +3,7 @@ Server development
 
 This section is dedicated to server development with focus on how new features can be implemented.
 
-* [Server API](http://onetrueerror.com/docs/api/server)
+* [Server API](http://coderrapp.com/docs/api/server)
 * [Installation guide](installation.md)
 
 # Core concepts
@@ -22,7 +22,7 @@ avoid test names like `Get_Null_ThrowException`, use names focusing_on_functiona
 Modules should be as independent as possible, thus it's better if you store information in the module tables from other modules events rather than 
 querying the other modules for information.
 
-The goal is that the entire OneTrueError server should be asynchronous, i.e. using `async`/`await` everywhere. That goal is almost fully achieved, there are
+The goal is that the entire codeRR server should be asynchronous, i.e. using `async`/`await` everywhere. That goal is almost fully achieved, there are
 however some issues here and there. All new code should however be asynchronous.
 
 Finally everything should be documented using XmlDoc. The documentation should not mirror the class/method naming but instead try to put classes/methods into

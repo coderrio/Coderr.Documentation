@@ -11,7 +11,7 @@ Example from the ASP.NET MVC5 extension:
 
 ```csharp
 // Note that it's in the base library's namespace (for intellisense discovery)
-namespace OneTrueError.Client
+namespace codeRR.Client
 {
     public static class ConfigurationExtensions
     {
@@ -25,7 +25,7 @@ namespace OneTrueError.Client
             configurator.ContextProviders.Add(new HttpHeadersProvider());
 			
 			// framework extension activation
-            GlobalFilters.Filters.Add(new OneTrueErrorFilter());
+            GlobalFilters.Filters.Add(new codeRRFilter());
             ErrorHttpModule.Activate();
         }
     }

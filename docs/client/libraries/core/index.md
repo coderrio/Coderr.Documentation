@@ -1,7 +1,7 @@
-Getting started with the OneTrueError client library
+Getting started with the codeRR client library
 =================================
 
-This library is the foundation of all exception reporting done with OneTrueError. All other client libraries are based upon this one.
+This library is the foundation of all exception reporting done with codeRR. All other client libraries are based upon this one.
 
 
 ## Context collections
@@ -52,5 +52,5 @@ Thread information like specified UI culture.
 
 ## More information
 
-* [Client API reference](http://onetrueerror.com/docs/api/client/)
+* [Client API reference](http://coderrapp.com/docs/api/client/)
 * [Getting started guide](../../gettingstarted.md)

@@ -3,19 +3,19 @@ Getting started
 
 # Presequites
 
-If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=onetrueerror.client).
+If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=coderr.client).
 
-You need to either use our [hosted service](https://app.onetrueerror.com) or [install](../server/installation.md) the open source server. Unsure of which one you should use? Check our [edition comparison](https://onetrueerror.com/editions/compare).
+You need to either use our [hosted service](https://app.coderrapp.com) or [install](../server/installation.md) the open source server. Unsure of which one you should use? Check our [edition comparison](https://coderrapp.com/editions/compare).
 
 ## Using the client library
 
 The first thing you need to do is to tell where the uploads should be sent and which application the reports are for.
-The URL should either point on your local server installation or `https://report.onetrueerror.com`. The appKey and sharedSecret can be found in your OneTrueError account.
+The URL should either point on your local server installation or `https://report.coderrapp.com`. The appKey and sharedSecret can be found in your codeRR account.
 
 Once the above steps are completed you can configure the library like this:
 
 ```csharp
-var url = new Uri("http://yourServer/onetrueerror/");
+var url = new Uri("http://yourServer/coderr/");
 OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 ```
 
@@ -50,7 +50,7 @@ Examples:
 
 ## Attaching context information
 
-Usually an exception is not enough information alone to be able to understand why and how the exception was thrown. OneTrueError will
+Usually an exception is not enough information alone to be able to understand why and how the exception was thrown. codeRR will
 always collect a large number of parameters for you. You might however have information that directly allows you to understand
 why the exception was thrown.
 

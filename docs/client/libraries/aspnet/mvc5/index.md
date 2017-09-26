@@ -1,7 +1,7 @@
 ASP.NET MVC 5 Integration
 =========================
 
-This client library will provide both ASP.NET and MVC specific context information for OneTrueError.
+This client library will provide both ASP.NET and MVC specific context information for codeRR.
 
 
 # Features
@@ -25,7 +25,7 @@ If our built in pages are not preferable you can include your own views.
 *Example*
 
 ```html
-@model OneTrueError.Client.AspNet.Mvc5.OneTrueViewModel
+@model codeRR.Client.AspNet.Mvc5.OneTrueViewModel
 
 <h1>Internal Server Error</h1>
 <p>
@@ -51,7 +51,7 @@ Create it like any other controller in the Controllers folder.
 
 The action methods should be name like the views. i.e. `public ActionResult InternalServer()`.
 
-The information provided by OneTrueErrors is represented as `OneTrueViewModel`. Take it as a parameter to your action methods.
+The information provided by codeRRs is represented as `OneTrueViewModel`. Take it as a parameter to your action methods.
 
 **Sample**
 
@@ -160,5 +160,5 @@ Result:
 
 # Links
 
-* [ASP.NET MVC5 API reference](http://onetrueerror.com/docs/api/client/aspnet/mvc5/)
+* [ASP.NET MVC5 API reference](http://coderrapp.com/docs/api/client/aspnet/mvc5/)
 * [Getting started guide](../../../gettingstarted.md)

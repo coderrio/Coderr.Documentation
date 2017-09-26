@@ -1,7 +1,7 @@
 Extending
 ==========
 
-You can extend the client library by either creating a new library for your favorite framework or by adding a new context information provider for an existing OneTrueError client.
+You can extend the client library by either creating a new library for your favorite framework or by adding a new context information provider for an existing codeRR client.
 
 # Extension points
 

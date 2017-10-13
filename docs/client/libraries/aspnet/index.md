@@ -73,14 +73,12 @@ That is, it tries to find a specific file first. If a specific file do not exist
 
 ### ASPX pages
 
-TO get information into your view, simply declare one of the following properties in your code behind.
+To get information into your view, simply declare one of the following properties in your code behind.
 
----------------------------------
 | Property | Type | Description |
 |------|----|----|
 |ErrorContext | HttpErrorReporterContext | Look in the Client API specification for more information |
 |Exception | *Exception* | The caught exception |
--------------------------------
 
 **Example**
 

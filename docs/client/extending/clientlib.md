@@ -5,7 +5,7 @@ Client libraries typically inject themselves into the exception pipeline of a fr
 
 # Configuration
 
-The convention is that you create an extension method for the `OneTrueConfiguration` class and name it like `Catch[LibraryName]Exceptions()`. 
+The convention is that you create an extension method for the `CoderrConfiguration` class and name it like `Catch[LibraryName]Exceptions()`. 
 
 Example from the ASP.NET MVC5 extension:
 
@@ -15,7 +15,7 @@ namespace codeRR.Client
 {
     public static class ConfigurationExtensions
     {
-        public static void CatchMvcExceptions(this OneTrueConfiguration configurator)
+        public static void CatchMvcExceptions(this CoderrConfiguration configurator)
         {
 			// add the custom context collectors
 			// provided for the framework that you support
@@ -71,7 +71,7 @@ public class SessionProvider : IContextInfoProvider
 
 # Starting the collection pipeline
 
-When an exception is discovered you need to start the collection pipeline. That's done in the same way as reporting exceptions manually (by invoking `OneTrue.Report()`). 
+When an exception is discovered you need to start the collection pipeline. That's done in the same way as reporting exceptions manually (by invoking `Err.Report()`). 
 
 There are however a special overload which can be useful for extension libraries. And that's this one: `ErrorReportDTO GenerateReport(IErrorReporterContext context)`. The context is passed to all context info providers and you can therefore create your custom implementation of it to allow your context collectors to get additional information during the collection process.
 
@@ -97,5 +97,5 @@ public class AspNetContext : IErrorReporterContext
 }
 ```
 
-The important thing to remember is that the custom context is only included when `OneTrue.GenerateReport` is invoked from your extension point. When exceptions are manually reported it's typically not used. Thus make sure that you can handle that in your context providers.
+The important thing to remember is that the custom context is only included when `Err.GenerateReport` is invoked from your extension point. When exceptions are manually reported it's typically not used. Thus make sure that you can handle that in your context providers.
 

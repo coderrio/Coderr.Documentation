@@ -12,9 +12,9 @@ An error page is displayed when an exception is detected. It looks like this per
 You configure it by using the following properties:
 
 ```csharp
-OneTrue.Configuration.UserInteraction.AskUserForDetails = true;
-OneTrue.Configuration.UserInteraction.AskUserForPermission = true;
-OneTrue.Configuration.UserInteraction.AskForEmailAddress = true;
+Err.Configuration.UserInteraction.AskUserForDetails = true;
+Err.Configuration.UserInteraction.AskUserForPermission = true;
+Err.Configuration.UserInteraction.AskForEmailAddress = true;
 ```
 
 Examples:
@@ -45,10 +45,10 @@ Screnshots can be activated by one of the following configuration lines:
 
 ```csharp
 //only of the active form
-OneTrue.Configuration.TakeScreenshotOfActiveFormOnly();
+Err.Configuration.TakeScreenshotOfActiveFormOnly();
 
 // of all forms            
-OneTrue.Configuration.TakeScreenshots();
+Err.Configuration.TakeScreenshots();
 ```
 
 The context collection will be shown as:
@@ -57,6 +57,6 @@ The context collection will be shown as:
 
 # Links
 
-* [WinForms API reference](http://coderrapp.com/docs/api/client/winforms)
+* [WinForms API reference](https://coderrapp.com/docs/api/client/winforms)
 * [Getting started guide](../../gettingstarted.md)
-* [Server installation](http://coderrapp.com/documentation/server/installation.md)
+* [Server installation](https://coderrapp.com/documentation/server/installation.md)

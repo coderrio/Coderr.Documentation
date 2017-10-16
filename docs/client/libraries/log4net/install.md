@@ -7,8 +7,8 @@ To get started add the following code to your application:
 
 ```
 var url = new Uri("http://yourServer/coderr/");
-OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
-OneTrue.Configuration.CatchLog4NetExceptions();
+Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.CatchLog4NetExceptions();
 ```
 
 It must be added after the log4net configuration, but before the first usage of `LogManager.GetLogger()`.
@@ -17,6 +17,6 @@ It must be added after the log4net configuration, but before the first usage of 
 ## More information
 
 * [Client configuration](index.md)
-* [Client API reference](http://coderrapp.com/docs/api/client/log4net/)
+* [Client API reference](https://coderrapp.com/docs/api/client/log4net/)
 * [Getting started guide](../../gettingstarted.md)
-* [Install codeRR server](http://coderrapp.com/download/server/)
+* [Install codeRR server](https://coderrapp.com/download/server/)

@@ -1,7 +1,7 @@
 Installation
 ==============
 
-1. Start by [downloading](http://coderrapp.com/download/server) the latest release.
+1. Start by [downloading](https://coderrapp.com/download/server) the latest release.
 2. Unzip it
 3. Open IIS management console
 2. Create a new application in IIS<br> 

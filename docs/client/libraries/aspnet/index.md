@@ -11,8 +11,8 @@ Add the following code in `global.asax`:
 
 ```
 var url = new Uri("http://yourServer/coderr");
-OneTrue.Configuration.Credentials(url, "13d82df603a845c7a27164c4fec19dd6", "6f0a0a7fac6d42caa7cc47bb34a6520b");
-OneTrue.Configuration.CatchAspNetExceptions();
+Err.Configuration.Credentials(url, "13d82df603a845c7a27164c4fec19dd6", "6f0a0a7fac6d42caa7cc47bb34a6520b");
+Err.Configuration.CatchAspNetExceptions();
 ```
 
 All unhandled exceptions will now be reported.
@@ -55,7 +55,7 @@ To activate it add the following code:
 
 ```csharp
 var provider = new VirtualPathProviderBasedGenerator("~/Errors/");
-OneTrue.Configuration.SetErrorPageGenerator(provider);
+Err.Configuration.SetErrorPageGenerator(provider);
 ```
 
 The code says that the library should look after error pages (either `.aspx` or  `.html`) in the specified folder:
@@ -142,7 +142,7 @@ If you are just using HTML you can use the following template strings:
     <meta charset="utf-8" />
     <title>An error occurred</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-    <meta name="X-powered-with" content="http://coderrapp.com" />
+    <meta name="X-powered-with" content="https://coderrapp.com" />
     <style type="text/css">
         /*CssStyles*/
     </style>
@@ -190,5 +190,5 @@ If you are just using HTML you can use the following template strings:
 
 # Links
 
-* [ASP.NET API reference](http://coderrapp.com/docs/api/client/aspnet/)
+* [ASP.NET API reference](https://coderrapp.com/docs/api/client/aspnet/)
 * [Getting started guide](../../gettingstarted.md)

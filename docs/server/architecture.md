@@ -601,7 +601,7 @@ public class ActivateAccountHandler : IRequestHandler<ActivateAccount, ActivateA
 		account.Activate();
 		await _repository.UpdateAsync(account);
 
-		Thread.CurrentPrincipal = new OneTruePrincipal(account.UserName);
+		Thread.CurrentPrincipal = new YourAppPrincipal(account.UserName);
 		var evt = new AccountActivated(account.Id, account.UserName)
 		{
 			EmailAddress = account.Email
@@ -779,7 +779,7 @@ The route values with colon prefix like `:applicationId` are picked up by the li
 
 That's it. Hope you enjoyed the show.
 
-If you want to read more you can visit the [online documentation](http://coderrapp.com/documentation/) which consists of everything from guides to API references. You can also [download the server](http://coderrapp.com/download/server/) to try the service. Or browse the [source code](http://github.com/gauffininteractive).
+If you want to read more you can visit the [online documentation](https://coderrapp.com/documentation/) which consists of everything from guides to API references. You can also [download the server](https://coderrapp.com/download/server/) to try the service. Or browse the [source code](http://github.com/gauffininteractive).
 
 The code is licensed under the [Reciprocal Public License v1.5](https://opensource.org/licenses/RPL-1.5).
 

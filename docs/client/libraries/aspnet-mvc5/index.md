@@ -12,10 +12,10 @@ The library apart from detect and upload uncaughts exceptions also provide the f
 
 The library have build in support for error pages. 
 
-To use the ones included in the library, add the following in `global.asax` (after the `OneTrue.Configuration.Credentials()` line):
+To use the ones included in the library, add the following in `global.asax` (after the `Err.Configuration.Credentials()` line):
 
 ```csharp
-OneTrue.Configuration.DisplayErrorPages();
+Err.Configuration.DisplayErrorPages();
 ```
 
 ### Custom error pages
@@ -25,7 +25,7 @@ If our built in pages are not preferable you can include your own views.
 *Example*
 
 ```html
-@model codeRR.Client.AspNet.Mvc5.OneTrueViewModel
+@model codeRR.Client.AspNet.Mvc5.CoderrViewModel
 
 <h1>Internal Server Error</h1>
 <p>
@@ -51,24 +51,24 @@ Create it like any other controller in the Controllers folder.
 
 The action methods should be name like the views. i.e. `public ActionResult InternalServer()`.
 
-The information provided by codeRRs is represented as `OneTrueViewModel`. Take it as a parameter to your action methods.
+The information provided by codeRRs is represented as `CoderrViewModel`. Take it as a parameter to your action methods.
 
 **Sample**
 
 ```
 public class ErrorController : Controller
 {
-    public ActionResult Index(OneTrueViewModel model)
+    public ActionResult Index(CoderrViewModel model)
     {
         return View("Error", model);
     }
 
-    public ActionResult NotFound(OneTrueViewModel model)
+    public ActionResult NotFound(CoderrViewModel model)
     {
         return View(model);
     }
 
-    public ActionResult InternalServerError(OneTrueViewModel model)
+    public ActionResult InternalServerError(CoderrViewModel model)
     {
         return View(model);
     }
@@ -160,5 +160,5 @@ Result:
 
 # Links
 
-* [ASP.NET MVC5 API reference](http://coderrapp.com/docs/api/client/aspnet/mvc5/)
-* [Getting started guide](../../../gettingstarted.md)
+* [ASP.NET MVC5 API reference](https://coderrapp.com/docs/api/client/aspnet/mvc5/)
+* [Getting started guide](../../gettingstarted.md)

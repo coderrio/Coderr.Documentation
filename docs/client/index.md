@@ -24,7 +24,7 @@ Name | Description
 --- | -----
 [codeRR.client](libraries/core/index.md) | Our reporting library, allows you to manually report exceptions.
 [codeRR.client.aspnet](libraries/aspnet/index.md) | Generic ASP.NET library. Catches all unhandled exceptions and report them. Collects information about the HTTP request, session data etc. Allows you to easily create custom error pages for different HTTP error codes.
-[codeRR.client.aspnet.mvc5](libraries/aspnet/mvc5/index.md) | ASP.NET MVC5 specific library. Does the same as the ASP.NET library, but do also collect specific MVC5 information like route data, ViewBag etc. Also allows you to customize your error pages by just creating them in the correct folder.
+[codeRR.client.aspnet.mvc5](libraries/aspnet-mvc5/index.md) | ASP.NET MVC5 specific library. Does the same as the ASP.NET library, but do also collect specific MVC5 information like route data, ViewBag etc. Also allows you to customize your error pages by just creating them in the correct folder.
 codeRR.client.aspnet.webapi2 | ASP.NET WebApi2 integration. Tracks exceptions, failed authentication attempts, invalid POSTs and other cool stuff.
 codeRR.client.aspnetcore.mvc | Core MVC integration. Tracks exceptions, failed authentication attempts, invalid POSTs and other cool stuff.
 codeRR.client.wcf | Catches unhandled exceptions in the WCF pipeline. Collects WCF specific information like the inbound WCF message that failed to be processed.

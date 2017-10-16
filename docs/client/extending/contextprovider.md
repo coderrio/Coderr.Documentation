@@ -53,7 +53,7 @@ return new ContectInfoCollection("YourCollectionName", properties);
 
 ## Adding tags
 
-You can add tags to error reports by using a context collection property named `OneTrueTags`:
+You can add tags to error reports by using a context collection property named `ErrTags`:
 
 ```csharp
 var properties = new Dictionary<string,string>();
@@ -67,7 +67,7 @@ catch (Exception ex)
 }
 
 //add tag:
-property["OneTrueTags"] = "fatal";
+property["ErrTags"] = "fatal";
 
 return new ContectInfoCollection("YourCollectionName", properties);
 ```

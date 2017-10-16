@@ -16,7 +16,7 @@ Once the above steps are completed you can configure the library like this:
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
-OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 ```
 
 The easiest way to report an exception is like this:
@@ -28,7 +28,7 @@ try
 }
 catch(SomeException ex)
 {
-	OneTrue.Report(ex);
+	Err.Report(ex);
 }
 ```
 
@@ -42,10 +42,10 @@ Automated exception handling is used by the framework specific activation method
 
 Examples:
 
-* `OneTrue.Configration.CatchWinFormsExceptions();`
-* `OneTrue.Configration.CatchWinApiExceptions();`
-* `OneTrue.Configration.CatchMvcExceptions();`
-* `OneTrue.Configration.CatchAdoNetExceptions();`
+* `Err.Configration.CatchWinFormsExceptions();`
+* `Err.Configration.CatchWinApiExceptions();`
+* `Err.Configration.CatchMvcExceptions();`
+* `Err.Configration.CatchAdoNetExceptions();`
 
 
 ## Attaching context information
@@ -63,7 +63,7 @@ try
 }
 catch (Exception ex)
 {
-    OneTrue.Report(ex, yourContextData);
+    Err.Report(ex, yourContextData);
 }
 ```
 
@@ -78,7 +78,7 @@ try
 }
 catch (Exception ex)
 {
-    OneTrue.Report(ex, new { UserId = userId, UserState = state });
+    Err.Report(ex, new { UserId = userId, UserState = state });
 }
 ```
 
@@ -102,7 +102,7 @@ catch (Exception ex)
 {
     var modelCollection = viewModel.ToContextCollection("ViewModel");
     var loggedInUser = User.ToContextCollection("User");
-    OneTrue.Report(ex, new[]{modelCollection, loggedInUser});
+    Err.Report(ex, new[]{modelCollection, loggedInUser});
 }
 ```
 
@@ -115,7 +115,7 @@ Hence you can easily attach and group your information just as you like.
 ## Categorize exceptions using tags
 
 We automatically identify common StackOverflow.com tags when analyzing exceptions (to help you find answers by searching StackOverflow.com). You can
-also add your own tags by adding a special property to any context collection named "OneTrueTags":
+also add your own tags by adding a special property to any context collection named "ErrTags":
 
 ```csharp
 try
@@ -124,7 +124,7 @@ try
 }
 catch (Exception ex)
 {
-    OneTrue.Report(ex, new { OneTrueTags = "important,backend" });
+    Err.Report(ex, new { ErrTags = "important,backend" });
 }
 ```
 

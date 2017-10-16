@@ -3,7 +3,7 @@ Server development
 
 This section is dedicated to server development with focus on how new features can be implemented.
 
-* [Server API](http://coderrapp.com/docs/api/server)
+* [Server API](https://coderrapp.com/docs/api/server)
 * [Installation guide](installation.md)
 
 # Core concepts

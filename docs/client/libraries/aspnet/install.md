@@ -8,13 +8,13 @@ To get started add the following code to your application:
 
 ```
 var url = new Uri("http://yourServer/coderr/");
-OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
-OneTrue.Configuration.CatchAspNetExceptions();
+Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.CatchAspNetExceptions();
 ```
 
 ## More information
 
 * [ASP.NET client configuration](index.md)
-* [ASP.NET client API reference](http://coderrapp.com/docs/api/client/aspnet/)
+* [ASP.NET client API reference](https://coderrapp.com/docs/api/client/aspnet/)
 * [Getting started guide](../../gettingstarted.md)
-* [Install codeRR server](http://coderrapp.com/download/server/)
+* [Install codeRR server](https://coderrapp.com/download/server/)

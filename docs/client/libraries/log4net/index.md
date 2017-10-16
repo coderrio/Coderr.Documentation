@@ -11,8 +11,8 @@ Add the following code somewhere before the first logger is retrieved.
 
 ```
 var url = new Uri("http://yourServer/coderr/");
-OneTrue.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
-OneTrue.Configuration.CatchLog4NetExceptions();
+Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.CatchLog4NetExceptions();
 ```
 
 That's it. 
@@ -40,5 +40,5 @@ As a bonus you will also see information about the log entry in codeRR:
 
 # Links
 
-* [Client API reference](http://coderrapp.com/docs/api/client/log4net/)
+* [Client API reference](https://coderrapp.com/docs/api/client/log4net/)
 * [Getting started guide](../../gettingstarted.md)

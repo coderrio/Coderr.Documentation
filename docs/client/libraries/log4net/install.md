@@ -1,11 +1,11 @@
-log4net installation
-====================
+log4net configuration
+=====================
 
-You've just installed the log4net integration library for codeRR. All exceptions that are logged through log4net will automatically be uploaded to codeRR.
+To start with, you need to tell the codeRR library what it should upload all error reports to.
 
-To get started add the following code to your application:
+Add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
-```
+```csharp
 var url = new Uri("http://yourServer/coderr/");
 Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 Err.Configuration.CatchLog4NetExceptions();
@@ -13,10 +13,21 @@ Err.Configuration.CatchLog4NetExceptions();
 
 It must be added after the log4net configuration, but before the first usage of `LogManager.GetLogger()`.
 
+Try to log an exception to see if it works.
+
+```csharp
+try
+{
+    throw new Exception("Oooop");
+}
+catch (Exception ex)
+{
+    _logger.Error("Testing codeRR", ex);
+}
+```
+
+The error should appear in the codeRR server shortly after being reported.
 
 ## More information
 
-* [Client configuration](index.md)
-* [Client API reference](https://coderrapp.com/docs/api/client/log4net/)
-* [Getting started guide](../../gettingstarted.md)
-* [Install codeRR server](https://coderrapp.com/download/server/)
+Read how you can [report errors manually](../../gettingstarted.md)

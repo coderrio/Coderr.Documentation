@@ -6,7 +6,7 @@ This client library will provide both ASP.NET and MVC specific context informati
 
 # Features
 
-The library apart from detect and upload uncaughts exceptions also provide the following features.
+The library apart from detect and upload uncaught exceptions also provide the following features.
 
 ## Error pages
 
@@ -140,7 +140,7 @@ Result:
 
 ### ViewData / ViewBag
 
-The Viewbag and/or ViewData is collected if specified.
+The ViewBag and/or ViewData is collected if specified.
 
 Example:
 

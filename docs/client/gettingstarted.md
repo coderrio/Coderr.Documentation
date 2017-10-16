@@ -1,25 +1,16 @@
 Getting started
 ================
 
-# Presequites
+# Prerequisites
 
-If you have not done it yet, you can download one of our libraries from [nuget](https://www.nuget.org/packages?q=coderr.client).
+This guide assumes that you have installed and configured one of our [nuget](https://www.nuget.org/packages?q=coderr.client) libraries.
 
-You need to either use our [hosted service](https://app.coderrapp.com) or [install](../server/installation.md) the open source server. Unsure of which one you should use? Check our [edition comparison](https://coderrapp.com/editions/compare).
+You must also use our [codeRR Live](https://app.coderrapp.com) service or install the [codeRR Community Server](../server/installation.md).
 
-## Using the client library
+## Simplest possible reporting
 
-The first thing you need to do is to tell where the uploads should be sent and which application the reports are for.
-The URL should either point on your local server installation or `https://report.coderrapp.com`. The appKey and sharedSecret can be found in your codeRR account.
-
-Once the above steps are completed you can configure the library like this:
-
-```csharp
-var url = new Uri("http://yourServer/coderr/");
-Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
-```
-
-The easiest way to report an exception is like this:
+The `Err` class in the client library is the main API that you use when reporting errors to codeRR. At its simplest form it takes
+a single argument, the exception that you want to report.
 
 ```csharp
 try
@@ -32,26 +23,14 @@ catch(SomeException ex)
 }
 ```
 
-The exception should appear in your server installation shortly after being reported.
+The exception should appear in your server instance shortly after being reported.
 
 ![](screenshot.png)
-
-### Automation
-
-Automated exception handling is used by the framework specific activation method (depends on which nuget package you installed). 
-
-Examples:
-
-* `Err.Configration.CatchWinFormsExceptions();`
-* `Err.Configration.CatchWinApiExceptions();`
-* `Err.Configration.CatchMvcExceptions();`
-* `Err.Configration.CatchAdoNetExceptions();`
-
 
 ## Attaching context information
 
 Usually an exception is not enough information alone to be able to understand why and how the exception was thrown. codeRR will
-always collect a large number of parameters for you. You might however have information that directly allows you to understand
+always collect a number of parameters for you. You might however have information that directly allows you to understand
 why the exception was thrown.
 
 That information can be attached when reporting:

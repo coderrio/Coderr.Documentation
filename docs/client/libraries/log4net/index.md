@@ -9,7 +9,7 @@ You need to have installed the codeRR server somewhere and created an applicatio
 
 Add the following code somewhere before the first logger is retrieved.
 
-```
+```csharp
 var url = new Uri("http://yourServer/coderr/");
 Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 Err.Configuration.CatchLog4NetExceptions();

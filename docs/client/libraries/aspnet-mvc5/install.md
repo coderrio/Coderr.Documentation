@@ -1,23 +1,38 @@
-ASP.NET MVC 5 installation
-====================
+ASP.NET MVC 5 configuration
+===========================
 
-You've just installed the ASP.NET MVC 5 integration library for codeRR. 
-All uncaught exceptions will automatically be uploaded to codeRR.
+To start with, you need to tell the codeRR library what it should upload all error reports to.
 
-To get started add the following code to your application:
+Add the following code in your `global.asax` or `Startup.cs`.
 
-```
+```csharp
 var url = new Uri("http://yourServer/coderr/");
 Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+```
 
+If you want codeRR to automatically report all unhandled exceptions you need to add this line too:
+
+```csharp
 Err.Configuration.CatchMvcExceptions();
 ```
 
-AppKey/SharedSecret can be found in your own codeRR server installation.
+Once done, try to report an exception.
+
+Add the following somewhere and then invoke your application:
+
+```csharp
+try
+{
+    throw new Exception("Hello world");
+}
+catch (Exception ex)
+{
+    Err.Report(ex, new { SampleData = "Context example"});
+}
+```
 
 ## More information
 
-* [ASP.NET MVC5 Quick start](index.md)
-* [ASP.NET MVC5 API reference](https://coderrapp.com/docs/api/client/aspnet/mvc5/)
-* [Getting started guide](../../../gettingstarted.md)
-* [Server installation](https://coderrapp.com/documentation/server/installation.md)
+The ASP.NET library also includes custom error pages and other goodies.
+
+Want to dig deeper? Read the [ASP.NET Mvc5 client documentation](index.md) or how you can [report errors](../../gettingstarted.md)

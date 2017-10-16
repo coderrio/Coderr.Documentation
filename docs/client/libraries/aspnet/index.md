@@ -86,7 +86,7 @@ public partial class NotFound : System.Web.UI.Page
 }
 ```
 
-Then simnply display the error information in your HTML:
+Then simply display the error information in your HTML:
 
 ```csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NotFound.aspx.cs" Inherits="codeRR.Client.AspNet.Demo.Errors.NotFound" %>
@@ -117,15 +117,13 @@ Then simnply display the error information in your HTML:
 
 If you are just using HTML you can use the following template strings:
 
----------------------------------
 | Template text | Description |
 |------|----|----|
 |`{ErrorMessage}` | Exception message |
--------------------------------
 
-**example**
+**Example**
 
-[html]
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,7 +174,7 @@ If you are just using HTML you can use the following template strings:
     </div>
 </body>
 </html>
-[/html]
+```
 
 # Links
 

@@ -1,11 +1,32 @@
-codeRR.Client installation
-=================================
+codeRR.Client configuration
+===========================
 
-You've just installed the codeRR client library. 
+To start with, you need to tell the codeRR library what it should upload all error reports to.
 
-We suggest that you read the [Getting started guide](../../gettingstarted.md) or read one of the links below
+Add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
-* [Getting started guide](../../gettingstarted.md)
-* [Client API reference](https://coderrapp.com/docs/api/client/)
-* [Install codeRR server](https://coderrapp.com/download/server/)
+```csharp
+var url = new Uri("http://yourServer/coderr/");
+Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+```
 
+Once done, try to report an exception.
+
+Add the following somewhere and then invoke your application:
+
+```csharp
+try
+{
+    throw new Exception("Hello world");
+}
+catch (Exception ex)
+{
+    Err.Report(ex, new { SampleData = "Context example"});
+}
+```
+
+## More information
+
+The ASP.NET library also includes custom error pages and other goodies.
+
+Want to dig deeper? Read the [client documentation](index.md) or how you can [report errors](../../gettingstarted.md)

@@ -1,20 +1,23 @@
-asp.net installation
-====================
+ASP.NET configuration
+=====================
 
-You've just installed the ASP.NET integration library for codeRR. 
-All uncaught exceptions will automatically be uploaded to codeRR.
+To start with, you need to tell the codeRR library where it should upload all error reports.
 
-To get started add the following code to your application:
+You typically add this code in your `global.asax` (copy/paste).
 
-```
+```csharp
 var url = new Uri("http://yourServer/coderr/");
 Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+```
+
+If you want codeRR to automatically report all unhandled exceptions you need to add this line too:
+
+```csharp
 Err.Configuration.CatchAspNetExceptions();
 ```
 
+
 ## More information
 
-* [ASP.NET client configuration](index.md)
-* [ASP.NET client API reference](https://coderrapp.com/docs/api/client/aspnet/)
-* [Getting started guide](../../gettingstarted.md)
-* [Install codeRR server](https://coderrapp.com/download/server/)
+[Client documentation](index.md) | [Reporting errors](../../gettingstarted.md)
+

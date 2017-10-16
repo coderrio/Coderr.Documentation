@@ -3,19 +3,9 @@ ASP.NET Integration
 
 This library is intended for ASP.NET projects that are not using MVC.
 
-# Setup
+# Configuration
 
-You need to have installed the codeRR server somewhere and created an application in it. Once you've done that you'll have a `appKey` and a `sharedSecret` which you can configure below.
-
-Add the following code in `global.asax`:
-
-```
-var url = new Uri("http://yourServer/coderr");
-Err.Configuration.Credentials(url, "13d82df603a845c7a27164c4fec19dd6", "6f0a0a7fac6d42caa7cc47bb34a6520b");
-Err.Configuration.CatchAspNetExceptions();
-```
-
-All unhandled exceptions will now be reported.
+Read this [article](install.md).
 
 # Context collections
 

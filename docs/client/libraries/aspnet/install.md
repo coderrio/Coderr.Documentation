@@ -33,12 +33,8 @@ catch (Exception ex)
 {
     Err.Report(ex, new { SampleData = "Context example"});
 }
+```
 
-## More information
-
-The ASP.NET library also includes custom error pages and other goodies.
-
-Want to dig deeper? Read the [ASP.NET client documentation](index.md) or how you can [report errors](../../gettingstarted.md)
 ## More information
 
 The ASP.NET library also includes custom error pages and other goodies.

@@ -9,7 +9,9 @@ Add the following code in your `Program.cs` (or the starting point of the framew
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
-Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.Credentials(url, 
+                              "yourAppKey", 
+                              "yourSharedSecret");
 Err.Configuration.CatchLog4NetExceptions();
 ```
 

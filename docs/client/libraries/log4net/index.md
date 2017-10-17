@@ -1,7 +1,7 @@
 log4net integration
 ================
 
-The log4net library injects codeRR into the logging pipeline of log4net. Each time you log something and include an exception it will be reported to codeRR. This is by far the easiest way to use the power of codeRR in legacy applizations (which use log4net).
+The log4net library injects codeRR into the logging pipeline of log4net. Each time you log something and include an exception it will be reported to codeRR. This is by far the easiest way to use the power of codeRR in legacy applications (which use log4net).
 
 # Setup
 

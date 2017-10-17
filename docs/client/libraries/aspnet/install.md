@@ -9,7 +9,9 @@ Add the following code in your `global.asax`.
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
-Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.Credentials(url, 
+                              "yourAppKey", 
+                              "yourSharedSecret");
 ```
 
 If you want codeRR to automatically report all unhandled exceptions you need to add this line too:

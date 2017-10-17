@@ -9,7 +9,9 @@ Add the following code in your `Program.cs` (first in `Main()`).
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
-Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
+Err.Configuration.Credentials(url, 
+                              "yourAppKey", 
+                              "yourSharedSecret");
 Err.Configuration.CatchWinFormsExceptions();
 ```
 

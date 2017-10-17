@@ -1,9 +1,9 @@
 codeRR.Client configuration
 ===========================
 
-If you have not done that yet, install the nuget package called `coderr.client`.
+If you have not done that yet, install the nuget package called `coderr.client.netstd`.
 
-Next, you need to tell the codeRR library what it should upload all error reports to.
+Next, you need to tell the codeRR library which server it should upload all error reports to.
 
 Add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
@@ -29,5 +29,7 @@ catch (Exception ex)
 ```
 
 ## More information
+
+The .NEt Standard library also includes custom error pages and other goodies.
 
 Want to dig deeper? Read the [client documentation](index.md) or how you can [report errors](../../gettingstarted.md)

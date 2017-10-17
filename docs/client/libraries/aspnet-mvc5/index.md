@@ -51,7 +51,7 @@ Create it like any other controller in the Controllers folder.
 
 The action methods should be name like the views. i.e. `public ActionResult InternalServer()`.
 
-The information provided by codeRRs is represented as `CoderrViewModel`. Take it as a parameter to your action methods.
+The information provided by codeRR is represented as `CoderrViewModel`. Take it as a parameter to your action methods.
 
 **Sample**
 
@@ -102,7 +102,7 @@ An error object will be returned if XML or JSON is requested by the HTTP client.
 
 ## Context collections
 
-To learn more about the included ASP.NET specifc context collections like HTTP Request, [read here](../index.md)
+To learn more about the included ASP.NET specific context collections like HTTP Request, [read here](../index.md)
 
 
 ### Controller

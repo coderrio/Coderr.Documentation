@@ -37,4 +37,8 @@ The error should appear in the codeRR server shortly after being reported.
 
 Did you know that codeRR can also take screenshots of your application forms? 
 
+Or display error pages like the one below?
+
+![](winforms_error_all.png)
+
 Want to dig deeper? Read the [client documentation](index.md) or how you can [report errors manually](../../gettingstarted.md)

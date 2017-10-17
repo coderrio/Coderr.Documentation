@@ -1,7 +1,9 @@
 ASP.NET configuration
 =====================
 
-To start with, you need to tell the codeRR library what it should upload all error reports to.
+If you have not done that yet, install the nuget package called `coderr.client.aspnet`.
+
+Next, you need to tell the codeRR library what it should upload all error reports to.
 
 Add the following code in your `global.asax`.
 
@@ -30,6 +32,11 @@ catch (Exception ex)
     Err.Report(ex, new { SampleData = "Context example"});
 }
 
+## More information
+
+The ASP.NET library also includes custom error pages and other goodies.
+
+Want to dig deeper? Read the [ASP.NET client documentation](index.md) or how you can [report errors](../../gettingstarted.md)
 ## More information
 
 The ASP.NET library also includes custom error pages and other goodies.

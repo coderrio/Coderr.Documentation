@@ -1,7 +1,9 @@
 WinForms configuration
 ======================
 
-To start with, you need to tell the codeRR library what it should upload all error reports to.
+If you have not done that yet, install the nuget package called `coderr.client.winforms`.
+
+Next, you need to tell the codeRR library what it should upload all error reports to.
 
 Add the following code in your `Program.cs` (first in `Main()`).
 

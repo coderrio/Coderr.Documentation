@@ -1,7 +1,9 @@
 codeRR.Client configuration
 ===========================
 
-To start with, you need to tell the codeRR library what it should upload all error reports to.
+If you have not done that yet, install the nuget package called `coderr.client`.
+
+Next, you need to tell the codeRR library what it should upload all error reports to.
 
 Add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
@@ -11,7 +13,6 @@ Err.Configuration.Credentials(url, "yourAppKey", "yourSharedSecret");
 ```
 
 Once done, try to report an exception.
-
 Add the following somewhere and then invoke your application:
 
 ```csharp

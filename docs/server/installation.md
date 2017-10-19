@@ -1,7 +1,7 @@
 Installation
 ==============
 
-1. Start by [downloading](https://coderrapp.com/download/server) the latest release.
+1. Start by [downloading](https://github.com/coderrapp/codeRR.Server/releases) the latest release.
 2. Unzip it
 3. Open IIS management console
 2. Create a new application in IIS<br> 
@@ -12,7 +12,7 @@ Installation
 7. Follow the online installation guide
 
 
-## Trouble shooting
+## Troubleshooting
 
 Get a blank page from IIS?
 

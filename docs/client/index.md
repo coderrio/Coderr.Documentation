@@ -29,7 +29,7 @@ codeRR.client.aspnet.webapi2 | ASP.NET WebApi2 integration. Tracks exceptions, f
 codeRR.client.aspnetcore.mvc | Core MVC integration. Tracks exceptions, failed authentication attempts, invalid POSTs and other cool stuff.
 codeRR.client.wcf | Catches unhandled exceptions in the WCF pipeline. Collects WCF specific information like the inbound WCF message that failed to be processed.
 [codeRR.client.log4net](libraries/log4net/index.md) | Reports all exceptions that you log, including the error message that you wrote.
-[codeRR.client.winforms](libraries/winforms/) | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
-codeRR.client.WPF | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
+[codeRR.client.winforms](libraries/winforms/index.md) | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
+[codeRR.client.WPF](libraries/wpf/index.md) | Reports all unhandled exceptions. Can take screen-shots and collect the state of all open windows and includes the state of all your active view models.
 
 If your favorite library isn't listed, you can either create your own or use the core library (`codeRR.client`) to report exceptions

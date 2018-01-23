@@ -23,10 +23,10 @@ There is also a section that shows you can write your own plugins for the Commun
 
 # codeRR pipeline
 
-Below is an illustration that shows the codeRR pipeline.
+Below is an illustration of the codeRR pipeline.
 
-It shows how an exception is handled from first detection to analyzing it in the server.
-Do note that all analysis services typically subscribe on the `ReportAddedToIncident` event, thus all analyzers will be invoked
-when the pipeline shown in the image ends.
+It shows how an exception is handled from the first detection to being analyzed in the server.
+
+***Integration tip:** Analysis services should subscribe on the `ReportAddedToIncident` event. By doing so, your analyzer class will automatically invoked in the end of the pipeline.*
 
 ![](pipeline.png)

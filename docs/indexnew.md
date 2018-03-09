@@ -1,8 +1,9 @@
 Reporting errors
 ================
 
-This guide intends to give you a brief overview for all our features with links to in depth articles for each feature.
-Most of our client libraries support automated reporting, read their respective [documentation](client/index.md) for more information about and which context providers each client has.. 
+This guide intends to give you a brief overview of all our features with links to in depth articles for each feature.
+
+Most of our client libraries support automated reporting, read their respective [documentation](client/index.md) for more information and about which context collections each client includes out of the box.
 
 
 # Prerequisites
@@ -13,7 +14,9 @@ You have also created an account at [codeRR Live](https://app.coderrapp.com) or 
 
 # Before going to production
 
-Disable the client library's ability to throw exceptions when something is wrong. 
+Before going through the features, you need to be aware of an important setting.
+
+Before going to production, disable the client library's ability to throw exceptions when something is wrong. 
 
 ```csharp
 Err.Configuration.ThrowExceptions = false;
@@ -47,9 +50,11 @@ The exception should appear in your server instance shortly after being reported
 
 An exception, by itself, do not convey a story. A typical example is when you try to access a non-existent key in a `Dictionary<TKey, TValue>`:
 
-> 'The given key was not present in the dictionary.'
+`'The given key was not present in the dictionary.'`
 
-When you have your own try/catch blocks, it makes sense to attach relevant context information.
+That message tells you the type or error, but not the key that was missing. The automated reporting typically include all information that you need.
+
+But when you have your own try/catch blocks, it makes sense to attach relevant context information manually.
 
 You can do that by using a second parameter:
 
@@ -70,11 +75,11 @@ That option is quite flexible. It support complex structures and the `dynamic` k
 
 # Using tags
 
-Tags both allow you to categorize incidents and to limit searches at stackoverflow.com
+Tags both allow you to categorize incidents and to limit search results when browsing stackoverflow.com for solutions.
 
 ![](client/tags-ui.png)
 
-To get started, add a property named `ErrTags` to any context collection (or by using the second `Report` parameter):
+To get started with tags, add a property named `ErrTags` to any context collection (or by using the second `Report` parameter):
 
 ```csharp
 // Adds two tags
@@ -86,15 +91,15 @@ Err.Report(ex, new { ErrTags = "important,backend" });
 
 ## Controlling report uploads
 
-By default, reports are thrown away if the upload fails, to not interfere with your application. 
+By default, reports are thrown away if the upload fails, to avoid interference with your application. 
 
-To enable the internal memory queue, use the following command to activate it:
+To enable queued report uploads, use the following configuration line to activate it:
 
 ```csharp
 Err.Configuration.QueueReports = true;
 ```
 
-The queue also makes sure that there is no delay our UI-unresponsiveness as the upload is made on a background thread.
+The queue also makes sure that your UI-unresponsiveness is not affected when reports are being uploaded.
 
 To learn how to further control the error report uploads, read our [customizing uploads guide](client/customize-uploads.md).
 

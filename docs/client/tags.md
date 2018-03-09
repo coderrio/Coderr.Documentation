@@ -80,5 +80,5 @@ catch (Exception ex)
 
 **Result:**
 
-![](client/tag-demo.png)
+![](tag-demo.png)
 

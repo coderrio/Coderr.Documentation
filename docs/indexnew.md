@@ -96,7 +96,7 @@ Err.Configuration.QueueReports = true;
 
 The queue also makes sure that there is no delay our UI-unresponsiveness as the upload is made on a background thread.
 
-To learn how to further control the error report uploads, read our [customizing uploads guide](client/customize-uploads.png).
+To learn how to further control the error report uploads, read our [customizing uploads guide](client/customize-uploads.md).
 
 ## Adding your own automated context providers
 
@@ -111,7 +111,7 @@ In your own application you probably have system specific information that you a
 
 ## Getting smarter prioritization
 
-***Feature only available in Coderr Live and Coderr OnPrem***
+***Feature only available in Coderr Live and Coderr OnPremise***
 
 Coderr can recommend which error you should correct next based on different operational aspects.
 

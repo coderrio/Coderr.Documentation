@@ -1,11 +1,11 @@
 ASP.NET Core MVC configuration
 ==============================
 
-If you have not done that yet, install the nuget package called `coderr.client.aspnetcore.mvc`.
+Install the nuget package called `coderr.client.aspnetcore.mvc`, if you haven't already.
 
 Next, you need to tell the codeRR library what server it should upload all error reports to.
 
-Add the following code in your `Program.cs`.
+Please add the following code in your `Program.cs`.
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
@@ -14,7 +14,7 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-If you want codeRR to automatically report all unhandled exceptions you need to add this the following in `Startup.cs`:
+To get codeRR to automatically report all unhandled exceptions you need to add the following in `Startup.cs`:
 
 For OWIN errors:
 
@@ -41,9 +41,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Once configure, start your application and try to report an exception.
+Once configured, start your application and try manually to report an exception.
 
-You can for instance add the following code somewhere and then invoke your controller action:
+You can for example add the following code somewhere and then invoke your controller action:
 
 ```csharp
 try
@@ -60,4 +60,4 @@ catch (Exception ex)
 
 The MVC library can report all invalid model states, track failed login attempts and more.
 
-Want to dig deeper? Read the [ASP.NET Core MVC client documentation](index.md) or how you can [report errors](../../gettingstarted.md)
+If you want more information, read the [ASP.NET Core MVC client documentation](index.md) or on error reporting [report errors](../../gettingstarted.md)

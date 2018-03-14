@@ -1,12 +1,12 @@
 ASP.NET Core MVC
 ================
 
-This client library will provide both ASP.NET and MVC specific context information for codeRR.
+This client library will provide both ASP.NET and MVC with specific context information for codeRR.
 
 
 # Features
 
-The library apart from detect and upload uncaught exceptions also provide the following features.
+Apart from detecting and uploading uncaught exceptions, the library also provides the following features.
 
 ## Context collections
 

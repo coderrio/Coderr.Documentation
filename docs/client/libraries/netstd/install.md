@@ -1,11 +1,11 @@
 codeRR.Client configuration
 ===========================
 
-If you have not done that yet, install the nuget package called `coderr.client.netstd`.
+Install the nuget package called `coderr.client.netstd`, if you haven't already.
 
-Next, you need to tell the codeRR library which server it should upload all error reports to.
+Next, you need to tell the codeRR library what server it should upload all error reports to.
 
-Add the following code in your `Program.cs` (or the starting point of the framework that you use).
+Please add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
@@ -14,8 +14,9 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-Once done, try to report an exception.
-Add the following somewhere and then invoke your application:
+configured, start your application and try manually to report an exception.
+
+You can for example add the following code somewhere and then invoke your application:
 
 ```csharp
 try
@@ -30,6 +31,6 @@ catch (Exception ex)
 
 ## More information
 
-The .NEt Standard library also includes custom error pages and other goodies.
+The .NEt Standard library also includes custom error pages and more.
 
-Want to dig deeper? Read the [client documentation](index.md) or how you can [report errors](../../gettingstarted.md)
+If you want more information, read the [client documentation](index.md) or on error reporting [report errors](../../gettingstarted.md)

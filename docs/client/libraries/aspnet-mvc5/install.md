@@ -1,11 +1,11 @@
 ASP.NET MVC 5 configuration
 ===========================
 
-If you have not done that yet, install the nuget package called `coderr.client.aspnet.mvc5`.
+Install the nuget package called `coderr.client.aspnet.mvc5`, if you haven't already.
 
-Next, you need to tell the codeRR library what it should upload all error reports to.
+Next, you need to tell the codeRR library what server it should upload all error reports to.
 
-Add the following code in your `global.asax` or `Startup.cs`.
+PLease add the following code in your `global.asax` or `Startup.cs`.
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
@@ -14,15 +14,15 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-If you want codeRR to automatically report all unhandled exceptions you need to add this line too:
+To get codeRR to automatically report all unhandled exceptions you need to add the following in `global.asax` or `Startup.cs`:
 
 ```csharp
 Err.Configuration.CatchMvcExceptions();
 ```
 
-Once done, try to report an exception.
+Once configured, start your application and try manually to report an exception.
 
-Add the following somewhere and then invoke your application:
+You can for example add the following code somewhere and then invoke your controller action:
 
 ```csharp
 try
@@ -37,6 +37,6 @@ catch (Exception ex)
 
 ## More information
 
-The MVC library also includes custom error pages and other goodies.
+The MVC library can report all invalid model states, track failed login attempts and more.
 
-Want to dig deeper? Read the [ASP.NET Mvc5 client documentation](index.md) or how you can [report errors](../../gettingstarted.md)
+If you want more information, read the  [ASP.NET Mvc5 client documentation](index.md) or on error reporting  [report errors](../../gettingstarted.md)

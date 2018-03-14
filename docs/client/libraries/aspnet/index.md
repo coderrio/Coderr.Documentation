@@ -41,7 +41,7 @@ This section describes how you can customize the built in features. You can also
 
 The library contains a custom error page which can be activated (and shown) when an exception is caught. 
 
-To activate it add the following code:
+To activate, add the following code:
 
 ```csharp
 var provider = new VirtualPathProviderBasedGenerator("~/Errors/");
@@ -59,7 +59,7 @@ The library tries to find pages based on the HTTP code. If the code is 404 the l
 3. Error.aspx
 4. Error.html
 
-That is, it tries to find a specific file first. If a specific file do not exist it tries to load a generic one.
+That is, it tries to find a specific file first. If a specific file does not exist, it tries to load a generic one.
 
 ### ASPX pages
 

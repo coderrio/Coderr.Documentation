@@ -1,11 +1,11 @@
 log4net configuration
 =====================
 
-If you have not done that yet, install the nuget package called `coderr.client.log4net`.
+Install the nuget package called `coderr.client.log4net`, if you haven't already.
 
-Next, you need to tell the codeRR library what it should upload all error reports to.
+Next, you need to tell the codeRR library what server it should upload all error reports to.
 
-Add the following code in your `Program.cs` (or the starting point of the framework that you use).
+Please add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");

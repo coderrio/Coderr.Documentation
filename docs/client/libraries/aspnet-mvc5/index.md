@@ -1,16 +1,16 @@
 ASP.NET MVC 5 Integration
 =========================
 
-This client library will provide both ASP.NET and MVC specific context information for codeRR.
+This client library will provide both ASP.NET and MVC with specific context information for codeRR.
 
 
 # Features
 
-The library apart from detect and upload uncaught exceptions also provide the following features.
+Apart from detecting and uploading uncaught exceptions, the library also provides the following features.
 
 ## Error pages
 
-The library have build in support for error pages. 
+The library has built in support for error pages. 
 
 To use the ones included in the library, add the following in `global.asax` (after the `Err.Configuration.Credentials()` line):
 
@@ -20,7 +20,7 @@ Err.Configuration.DisplayErrorPages();
 
 ### Custom error pages
 
-If our built in pages are not preferable you can include your own views.
+You can include your own views instead of the built in pages.
 
 *Example*
 

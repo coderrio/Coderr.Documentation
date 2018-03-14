@@ -1,11 +1,11 @@
 WPF configuration
 =================
 
-If you have not done that yet, install the nuget package called `coderr.client.wpf`.
+Install the nuget package called `coderr.client.wpf`, if you haven't already.
 
-Next, you need to tell the codeRR library where it should upload all error reports to.
+Next, you need to tell the codeRR library what server it should upload all error reports to.
 
-Add the following code in your `App.xaml.cs`.
+Please add the following code in your `App.xaml.cs`.
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
@@ -15,9 +15,10 @@ Err.Configuration.Credentials(url,
 Err.Configuration.CatchWpfExceptions();
 ```
 
-Once done, all unhandled exceptions should be reported to codeRR.
+Once configured, start your application and try manually to report an exception.
 
-Try to log an exception to see if it works.
+You can for example add the following code somewhere and then invoke your application:
+
 
 ```csharp
 public void YourButton_Click()
@@ -43,4 +44,4 @@ Or display error pages like the one below?
 
 ![](../winforms/winforms_error_all.png)
 
-Want to dig deeper? Read the [client documentation](index.md) or how you can [report errors manually](../../gettingstarted.md)
+If you want more information, read the [client documentation](index.md) or on error reporting [report errors manually](../../gettingstarted.md)

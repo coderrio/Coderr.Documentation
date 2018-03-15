@@ -1,21 +1,21 @@
 Starting up
 ===========
 
-Here is a description of the steps you will go through when starting up codeRR for the first time. You begin by registering and creating an account followed by logging in and making sure you can see monitor your application in codeRR. Registering and creating an account only needs to happen once, so the second time you are using codeRR, you will get straight to the log-in page after signing in.
+Here is a description of the steps you will go through when starting up codeRR for the first time. You begin by registering and creating an account followed by logging in and making sure you can see and monitor your application in codeRR. Registering and creating an account only needs to happen once, so the second time you are using codeRR, you will get straight into the log-in page after signing in.
 
-Below you will find a series of instructions and screenshots intended as a guide to have if something goes wrong or you need to pause the process and then return later. If you find anything not working during this process, please email us at help@coderr.io so we can promptly assist you. We might also email you if we notice you have not completed all the steps.
+Below you will find a series of instructions and screenshots intended as a guide to have if something goes wrong or you need to pause the process and then return later. If you experience any problems with the process, please email us at help@coderr.io so we can promptly assist you. We might also email you if we notice you have not completed all the steps.
 
 # 1. Registration
 
-You can use either an existing external account (choice on the left) when registering or creating a new account specifically for codeRR (choice to the right). Next time you are using codeRR, this is the view that you will see again, so please remember your sign-in details.
+You can use either an existing external account (choice on the left) when registering or creating a new account specifically for codeRR (choice to the right). The next time you are using codeRR, this will be the view that you will have again, so please remember your sign-in details.
 
 ![](register-first-page.png)
 
-If you are registering using an external provider account (to the left) then you will need to finalize your registration in the following window. Note that you can sign in with a different username than what you used for authentication. The user name that you put in will be the one you register. 
+If you are registering using an external provider account (choice to the left) then you will need to finalize your registration in the following window. Note that you can sign in with a different username than what you used for authentication. The user name that you put in will be the one you register. 
 
 ![](register.png)
 
-If you are creating a new account (option right) and have clicked the blue "Register" - button, your input is needed to finalize registration in this window:
+If you are creating a new account (the option to the right) and clicked "Register" - in blue, your input is needed to finalize registration in this window:
  
  ![](register-local.png)
 
@@ -25,9 +25,9 @@ As codeRR is intended to be used by organizations with multiple users, you will 
  
 ![](welcome.png)
 
-The only way to join an existing organization is to receive an invitation email from a colleague. The "Join" page will just inform you of that fact.
+Please note that the only way to join an existing organization is to receive an invitation email from a colleague who set up the organizational account. The "Join" page is just to inform you of that.
  
-If you clicked "Create" earlier, you can fill in you the name of your organization or company (here shown as the test name "Acme Inc.") and then click "Create" once more to associate your registration with an organization. 
+If you clicked "Create" earlier, you can fill in the name of your organization or company (here shown as the test name "Acme Inc.") and then click "Create" once more to associate your registration with an organization. 
 
 ![](create-org.png)
 
@@ -37,13 +37,13 @@ After successfully creating a new organization, you will receive a welcome email
 
 # 3. Logging in
 
-If you successfully have completed step 1 and 2 above, then you will reach the "Login"- screen. This is also the view you will see when returning to codeRR next time. From here you normally would just be  logging in to the organization that has been associated with you (shown as "mix max" in the example).  If you are the first to register your organization with administrative privileges and you have multiple organizations, you can log it to those here. you can remain associated with the named organization. You can also activate your subscription at any time.
+If you successfully have completed step 1 and 2 above, then you will reach the "Login"- screen. This is also the view you will see when returning to codeRR next time. From here you normally would just be  logging in to the organization that has been associated with you (shown as "mix max" in the example).  However, if you are the first to register your organization and then have administrative privileges, you can log in to any organization where you have these privileges. Here, you can also activate your subscription at any time.
 
 ![](login-org.png)
 
 # 4. Creating an application
 
-You need to identify the error reporting entity and name the application that you want to monitor. Write the name of your application and then click "Create". For clarity we recommend that you name your client and server as two different entities (or applications). That way it is easier to see where the error has been generated. If you later would like to add another application to codeRR, you can do it from this window.
+You need to identify the error reporting entity and name the application that you want to monitor. Write the name of your application and then click "Create". For clarity we recommend that you name your client and server as two different entities (or applications). That way it is easier to see where the error has been generated. If you later would like to add another application to codeRR, you can do so from this window.
 
 ![](create-app.png)
 
@@ -53,19 +53,13 @@ Select the correct .NET library or framework that you have used in your applicat
 
 ![](configure-app.png)
 
-You will now see a set of instructions that you will need to follow. First, ensure you have installed the related nuget package of your chosen .NET library. Next, you need to see to that the codeRR library knows what server to upload the errors to. The further instructions show how by adding lines of code, you configure where you want the errors reported to. There is also an example of how you set up automatic reporting.  
+You will now see a set of instructions that you will need to follow. First, ensure you have installed the related nuget package of your chosen .NET library. Next, you'll need to see to that the codeRR library knows what server to upload the errors to. 
 
-After adding the lines of code, test your configuration by trying to produce an error manually. In your application, add a piece of test code and invoke your controller action. After successfully generating an error (see below) you can delete this line of code.
-Click "Configuration is done".
+After adding the lines of code, test your configuration by trying to produce an error manually. 
 
-```csharp
-var url = new Uri("https://report.coderr.io/");
-Err.Configuration.Credentials(url, 
-                              "yourAppKey", 
-                              "yourSharedSecret");
+After successfully generating an error, click on the "Configuration is done" button.
 
-``` 
-     
+If you failed to upload an error, don't hesitate to [contact us](mailto:help@coderr.io).
 
 # 6.	First error generated
 
@@ -73,4 +67,4 @@ If you have been successful with testing your configuration by generating an exc
 
 ![](reported.png) 
 
-In case codeRR could not see the attempted exception, please contact us at [help@coderr.io](help@coderr.io) so that we can assist and investigate what went wrong. 
+In case codeRR could not detect your attempted exception, please contact us at [help@coderr.io](help@coderr.io) so that we can assist and investigate what went wrong. 

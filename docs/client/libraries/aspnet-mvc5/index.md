@@ -160,5 +160,5 @@ Result:
 
 # Links
 
-* [ASP.NET MVC5 API reference](https://coderrapp.com/docs/api/client/aspnet/mvc5/)
+* [ASP.NET MVC5 API reference](https://coderr.io/docs/api/client/aspnet/mvc5/)
 * [Getting started guide](../../gettingstarted.md)

@@ -5,7 +5,7 @@ Getting started
 
 This guide assumes that you have installed and configured one of our [nuget](https://www.nuget.org/packages?q=coderr.client) libraries.
 
-You have also created an account at our hosted service [codeRR Live](https://app.coderrapp.com) or in your installed instance of [codeRR Community Server](../server/installation.md).
+You have also created an account at our hosted service [codeRR Live](https://app.coderr.io) or in your installed instance of [codeRR Community Server](../server/installation.md).
 
 ## Simplest possible reporting
 
@@ -144,7 +144,7 @@ If you want to control queue size (default is 10 reports) or the number of uploa
 
 ```csharp
 // Initialization
-var uri = new Uri("https://report.coderrapp.com/");
+var uri = new Uri("https://report.coderr.io/");
 
 var uploader = new UploadToCoderr(uri, "yourOwnAppKey", "yourOwnSharedSecret");
 

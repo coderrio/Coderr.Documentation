@@ -5,9 +5,11 @@ Partitions are used to segment incidents to be able to better prioritize which i
 
 A typical usage is to be able to tell the impact what each incident have on your system or users.
 
-![](partition-ui.png)
+![](../screens/suggestions.png)
 
-In the above example we have specified that we have ten users in the system and Coderr is therefore able to tell that this specific incident affect 20% of our users.
+In the above example we have specified that we have 50 users in the system and Coderr is therefore able to tell that this specific incident affect 5% of our users.
+
+We have also said that we have three database servers and can therefore see that the invalid SQL statement have only been reported from one of them.
 
 # Adding partitions to incidents
 
@@ -29,6 +31,7 @@ That's everything required. Report an error to see the information under the rep
 
 You can also go to "My incidents" in the left menu to see suggestions based on your configured partitions.
 
+
 # Improving suggestions
 
 ***You need to be an administrator to be able to make this configuration.***
@@ -39,16 +42,15 @@ Therefore, prioritization of incidents are made upon the known total (i.e. based
 
 If you would like to know see the impact based on the actual number of installations or users you need to go to the administration pages and specify those.
 
-1. Click on the hamburger menu top right and choose "Administration area"<br>
-![](partitions-configure1.png)
-2. Choose "Applications" in the left menu<br>![](partitions-configure2.png)
-3. Select the hands icon for your application<br>![](partitions-configure3.png)
-4. Click on "Create new"<br> ![](partitions-configure4.png)
+1. Click on the cog in the top right menu<br>![](configure1.png)
+2. Make sure that the correct application is selected in the top left menu<br>![](configure2.png)
+3. Click on prioritization in the menu<br>![](configure3.png)
+4. Click on "Create new"<br> ![](configure4.png)
 
-Once there you should see the following page:
+Fill in the information about your partition.
 
-![](partitions-configure5.png)
+Here is a sample for users:
 
-Configure the partition.
+![](configure5.png)
 
-Now you should see the absolute impact in your system.
+Once done, try to report an exception and then click on "Suggestions" under the "Discover" menu.

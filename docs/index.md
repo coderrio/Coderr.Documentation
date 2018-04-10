@@ -1,7 +1,7 @@
 Reporting errors
 ================
 
-This guide intends to give you a brief overview of all of codeRR reporting features with links to in-depth articles for each of them.
+This guide intends to give you a brief overview of all of Coderr reporting features with links to in-depth articles for each of them.
 
 Most of our client libraries support automated reporting. Find out what context collections is included for each client and more in the [documentation](client/index.md).
 
@@ -10,7 +10,7 @@ Most of our client libraries support automated reporting. Find out what context 
 
 To fully take advantage of this guide, we recommend you to have installed and configured one of our [client libraries](client/index.md).
 
-You should also have created an account at [codeRR Live](https://app.coderrapp.com) or in your locally installed [codeRR Community Server](server/installation.md).
+You should also have created an account at [Coderr Live](https://app.coderr.io) or in your locally installed [Coderr Community Server](server/installation.md).
 
 # Settings
 
@@ -26,7 +26,7 @@ Allowing the client library to throw exceptions is only valuable when you are co
 
 # Reporting errors manually
 
-The `Err` class in the client library is the main API for codeRR. 
+The `Err` class in the client library is the main API for Coderr. 
 
 In its simplest form you report errors by using the `Err.Report(exception)` method.
 
@@ -43,7 +43,7 @@ catch(SomeException ex)
 
 The exception should appear in your server instance shortly after being reported.
 
-![](client/screenshot.png)
+![](screens/discover-overview.png)
 
 
 ## Attaching context information
@@ -69,7 +69,7 @@ catch (Exception ex)
 }
 ```
 
-![](client/anonymous-object.png)
+![](screens/context-collection.png)
 
 Note that this option is quite flexible as it supports complex structures and the `dynamic` keyword. Read more in our [manual reporting guide](client/manual-reporting.md).
 
@@ -77,7 +77,7 @@ Note that this option is quite flexible as it supports complex structures and th
 
 Tags both allow you to categorize incidents and to limit search results when browsing stackoverflow.com for solutions.
 
-![](client/tags-ui.png)
+![](screens/tags.png)
 
 To get started with tags, add a property named `ErrTags` to any context collection (or by using the second `Report` parameter):
 
@@ -120,13 +120,13 @@ In your own application you probably have system specific information that you a
 
 Coderr can recommend which error for you to focus on and to correct, based on criteria set by you. These setting will align with your operational and business priorities and impact. Here is an example:
 
-![](client/partition-ui.png)
+![](screens/suggestions.png)
 
-Here, codeRR is showing the error is affecting 20% of partition users.
+Here, Coderr is suggesting two incidents based on their operational affect on your database servers and based on the number of affected users.
 
 Enhanced prioritization requires you to add partitions, allowing Coderr to calculate the effect on your system for each incident.
 
-[Read more about partitions](client/partitions.md).
+[Read more about partitions](features/partitions/).
 
 # More information
 

@@ -3,7 +3,7 @@ log4net configuration
 
 Install the nuget package called `coderr.client.log4net`, if you haven't already.
 
-Next, you need to tell the codeRR library what server it should upload all error reports to.
+Next, you need to tell the Coderr library what server it should upload all error reports to.
 
 Please add the following code in your `Program.cs` (or the starting point of the framework that you use).
 
@@ -26,11 +26,11 @@ try
 }
 catch (Exception ex)
 {
-    _logger.Error("Testing codeRR", ex);
+    _logger.Error("Testing Coderr", ex);
 }
 ```
 
-The error should appear in the codeRR server shortly after being reported.
+The error should appear in the Coderr server shortly after being reported.
 
 ## More information
 

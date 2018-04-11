@@ -1,7 +1,7 @@
-Getting started with the codeRR client library
+Getting started with the Coderr client library
 =================================
 
-This library is the foundation of all exception reporting done with codeRR. All other client libraries are based upon this one.
+This library is the foundation of all exception reporting done with Coderr. All other client libraries are based upon this one.
 
 
 ## Context collections

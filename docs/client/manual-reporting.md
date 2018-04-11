@@ -55,7 +55,7 @@ Complex structures are supported.
 
 ### Custom context collections
 
-We also have an object overload which can transform any object into a context collection (one of the groups in the "Context Data" menu in the codeRR website).
+We also have an object overload which can transform any object into a context collection (one of the groups in the "Context Data" menu in the Coderr website).
 
 Below we are using `ToContextCollection()` extension method which can transform any object (including complex objects) into a context collection.
 

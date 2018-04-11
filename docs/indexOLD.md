@@ -1,7 +1,7 @@
-﻿codeRR documentation
+﻿Coderr documentation
 ===============
 
-Welcome to the codeRR documentation. 
+Welcome to the Coderr documentation. 
 
 The documentation have been divided into two sections:
 
@@ -15,15 +15,15 @@ The documentation focuses on usage, but also have a small section that shows how
 
 # Server documentation
 
-The server documentation show how you can install and configure codeRR Community Edition, which is the open source alternative to our hosted solution codeRR Live.
+The server documentation show how you can install and configure Coderr Community Edition, which is the open source alternative to our hosted solution Coderr Live.
 
 There is also a section that shows you can write your own plugins for the Community Edition and the OnPremise commercial alternative.
 
 [Server documentation](server/index.md)
 
-# codeRR pipeline
+# Coderr pipeline
 
-Below is an illustration of the codeRR pipeline.
+Below is an illustration of the Coderr pipeline.
 
 It shows how an exception is handled from the first detection to being analyzed in the server.
 

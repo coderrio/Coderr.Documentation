@@ -3,7 +3,7 @@ ASP.NET Core MVC configuration
 
 Install the nuget package called `coderr.client.aspnetcore.mvc`, if you haven't already.
 
-Next, you need to tell the codeRR library what server it should upload all error reports to.
+Next, you need to tell the Coderr library what server it should upload all error reports to.
 
 Please add the following code in your `Program.cs`.
 
@@ -14,7 +14,7 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-To get codeRR to automatically report all unhandled exceptions you need to add the following in `Startup.cs`:
+To get Coderr to automatically report all unhandled exceptions you need to add the following in `Startup.cs`:
 
 For OWIN errors:
 
@@ -35,7 +35,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc(options =>
     {
-        // for codeRR
+        // for Coderr
         options.CatchMvcExceptions();
     });
 }

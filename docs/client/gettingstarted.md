@@ -5,11 +5,11 @@ Getting started
 
 This guide assumes that you have installed and configured one of our [nuget](https://www.nuget.org/packages?q=coderr.client) libraries.
 
-You have also created an account at our hosted service [codeRR Live](https://app.coderr.io) or in your installed instance of [codeRR Community Server](../server/installation.md).
+You have also created an account at our hosted service [Coderr Live](https://app.coderr.io) or in your installed instance of [Coderr Community Server](../server/installation.md).
 
 ## Simplest possible reporting
 
-The `Err` class in the client library is the main API for codeRR. 
+The `Err` class in the client library is the main API for Coderr. 
 
 At its simplest form you report errors using the `Err.Report(exception)` method.
 
@@ -73,7 +73,7 @@ Complex objects are supported.
 
 ### Custom collections
 
-We also have an object overload which can transform any object into a context collection (one of the groups in the "Context Data" menu in the codeRR website).
+We also have an object overload which can transform any object into a context collection (one of the groups in the "Context Data" menu in the Coderr website).
 
 Below we are using `ToContextCollection()` extension method which can transform any object (including complex objects) into a context collection.
 
@@ -124,7 +124,7 @@ catch (Exception ex)
 
 # Before going to production
 
-Disable the client libraries ability to throw exceptions when something is wrong. That option is only valuable when you are configuring/learning codeRR.
+Disable the client libraries ability to throw exceptions when something is wrong. That option is only valuable when you are configuring/learning Coderr.
 
 ```csharp
 Err.Configuration.ThrowExceptions = false;
@@ -140,7 +140,7 @@ To enable the internal memory queue, activate it:
 Err.Configuration.QueueReports = true;
 ```
 
-If you want to control queue size (default is 10 reports) or the number of upload attempts (default is 3 per report) you need to configure codeRR like this:
+If you want to control queue size (default is 10 reports) or the number of upload attempts (default is 3 per report) you need to configure Coderr like this:
 
 ```csharp
 // Initialization

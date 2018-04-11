@@ -3,7 +3,7 @@ ASP.NET MVC 5 configuration
 
 Install the nuget package called `coderr.client.aspnet.mvc5`, if you haven't already.
 
-Next, you need to tell the codeRR library what server it should upload all error reports to.
+Next, you need to tell the Coderr library what server it should upload all error reports to.
 
 PLease add the following code in your `global.asax` or `Startup.cs`.
 
@@ -14,7 +14,7 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-To get codeRR to automatically report all unhandled exceptions you need to add the following in `global.asax` or `Startup.cs`:
+To get Coderr to automatically report all unhandled exceptions you need to add the following in `global.asax` or `Startup.cs`:
 
 ```csharp
 Err.Configuration.CatchMvcExceptions();

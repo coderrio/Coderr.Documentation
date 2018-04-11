@@ -4,13 +4,13 @@ This is CodeProject after all, thus you might be interested in how the service i
 
 ## Structure
 
-codeRR is a monolith, i.e. everything is run as a single application. 
+Coderr is a monolith, i.e. everything is run as a single application. 
 
 Let's take a look at the solution structure with the help of a dependency diagram:
 
-![codeRR dependency diagram](architecture-dependency-diagram.png)
+![Coderr dependency diagram](architecture-dependency-diagram.png)
 
-codeRR consists of the following components:
+Coderr consists of the following components:
 
  Name | Description 
 ----|------
@@ -25,9 +25,9 @@ Web | ASP.NET WebApi + MVC. The front end
 
 ## Modules
 
-Within the App and Api components, codeRR is divided into different modules (or rather separation of concerns).
+Within the App and Api components, Coderr is divided into different modules (or rather separation of concerns).
 
-![The modules that codeRR consists of](architecture-modules.png)
+![The modules that Coderr consists of](architecture-modules.png)
 
 The implementation of those modules are placed in the App component while the Api defines how each module can be used. 
 
@@ -45,7 +45,7 @@ The service layer is implemented with as CQRS handlers with the help of Griffin.
 
 ## CQRS
 
-Messaging within OTE is done through commands, queries and events. Martin Fowler has an [article](http://martinfowler.com/bliki/CQRS.html) which explains the pattern. In codeRR we are using the declared interfaces in [DotNetCqs](https://github.com/jgauffin/dotnetcqs) to separate the definition from the implementation. 
+Messaging within OTE is done through commands, queries and events. Martin Fowler has an [article](http://martinfowler.com/bliki/CQRS.html) which explains the pattern. In Coderr we are using the declared interfaces in [DotNetCqs](https://github.com/jgauffin/dotnetcqs) to separate the definition from the implementation. 
 
 CQRS was selected as it separates read from write. It's an important aspect as it removes coupling between different concerns for the same entity and thus reduces the amount of changes or compromises that else is forced upon each entity. 
 
@@ -63,7 +63,7 @@ Let's see how we live up to the CQRS pattern.
 
 Commands should be seen as a business transaction, i.e. the execution of it might involve one ore more business entities.
 
-In codeRR the command/query is separated from the execution. The command/query is more of an instruction, a [Data Transfer Object](http://martinfowler.com/eaaCatalog/dataTransferObject.html), which will be executed by a command/query handler in the backend.
+In Coderr the command/query is separated from the execution. The command/query is more of an instruction, a [Data Transfer Object](http://martinfowler.com/eaaCatalog/dataTransferObject.html), which will be executed by a command/query handler in the backend.
 
 A command can look like this:
 
@@ -107,7 +107,7 @@ await _cmdBus.ExecuteAsync(cmd)
 
 Once the command have been received by the server it must be exeucted. That is done by a class which implements the `ICommandHandler<TCommand>` interface:
 
-In this case it's the [InviteUserHandler](https://github.com/gauffininteractive/codeRR.Server/blob/master/src/Server/codeRR.App/Core/Invitations/CommandHandlers/InviteUserHandler.cs). It's shortened below to just show the contents of a handler.
+In this case it's the [InviteUserHandler](https://github.com/gauffininteractive/Coderr.Server/blob/master/src/Server/Coderr.App/Core/Invitations/CommandHandlers/InviteUserHandler.cs). It's shortened below to just show the contents of a handler.
 
 ```csharp
 [Component]
@@ -152,7 +152,7 @@ internal class InviteUserHandler : ICommandHandler<InviteUser>
 }
 ```
 
-Another design decision have been made regarding commands in codeRR. The command is just a promise of an action which will happen in the near future. That distinction is really important as you need to design your applications differently. In a regular WCF service or web application you know that as soon as the service or controller have returned the action have been executed and the result is therefore available. 
+Another design decision have been made regarding commands in Coderr. The command is just a promise of an action which will happen in the near future. That distinction is really important as you need to design your applications differently. In a regular WCF service or web application you know that as soon as the service or controller have returned the action have been executed and the result is therefore available. 
 
 Since the command is executed after the invocation to the bus returns, you cannot make that assumption. Therefore you need another mechanism to act upon executed commands.
 
@@ -374,9 +374,9 @@ The code for the controller is a bit too much to show here, but it basically use
 
 The source code of the mentioned classes:
 
-* [CqsClient (TypeScript)](https://github.com/gauffininteractive/codeRR.Server/blob/master/src/Server/codeRR.Web/Scripts/CqsClient.ts)
-* [CqsController](https://github.com/gauffininteractive/codeRR.Server/blob/master/src/Server/codeRR.Web/Controllers/CqsController.cs)
-* [CqsObjectMapper](https://github.com/gauffininteractive/codeRR.Server/blob/master/src/Server/codeRR.Web/Infrastructure/Cqs/CqsObjectMapper.cs)
+* [CqsClient (TypeScript)](https://github.com/gauffininteractive/Coderr.Server/blob/master/src/Server/Coderr.Web/Scripts/CqsClient.ts)
+* [CqsController](https://github.com/gauffininteractive/Coderr.Server/blob/master/src/Server/Coderr.Web/Controllers/CqsController.cs)
+* [CqsObjectMapper](https://github.com/gauffininteractive/Coderr.Server/blob/master/src/Server/Coderr.Web/Infrastructure/Cqs/CqsObjectMapper.cs)
 * [CqsMessageProcessor](https://github.com/jgauffin/Griffin.Framework/blob/master/src/Griffin.Framework/Griffin.Cqs/CqsMessageProcessor.cs)
 
 Still hanging in there? Feel free to scroll up to the pipeline image again for a quick recap before we continue. 
@@ -575,7 +575,7 @@ To register services in our [IoC of choice](https://github.com/jgauffin/griffin.
 
 #### Example
 
-Let's look at the [ActivateAccountHandler](https://github.com/gauffininteractive/codeRR.Server/blob/master/src/Server/codeRR.App/Core/Accounts/Requests/ActivateAccountHandler.cs) class as an example:
+Let's look at the [ActivateAccountHandler](https://github.com/gauffininteractive/Coderr.Server/blob/master/src/Server/Coderr.App/Core/Accounts/Requests/ActivateAccountHandler.cs) class as an example:
 
 ```csharp
 //this ATTRIBUTE	
@@ -625,7 +625,7 @@ builder.RegisterComponents(Lifetime.Scoped, Assembly.GetExecutingAssembly());
 var ioc = builder.Build();
 ```
 
-You can see the complete container configuration in [github](https://github.com/gauffininteractive/codeRR.Server/blob/master/src/Server/codeRR.Web/App_Start/CompositionRoot.cs).
+You can see the complete container configuration in [github](https://github.com/gauffininteractive/Coderr.Server/blob/master/src/Server/Coderr.Web/App_Start/CompositionRoot.cs).
 
 # User interface
 
@@ -670,7 +670,7 @@ Here is a sample view:
 And the corresponding view model:
 
 ```csharp
-module codeRR.Feedback {
+module Coderr.Feedback {
     import CqsClient = Griffin.Cqs.CqsClient;
     import GetIncidentFeedback = Web.Feedback.Queries.GetIncidentFeedback;
     import GetIncidentFeedbackResult = Web.Feedback.Queries.GetIncidentFeedbackResult;
@@ -740,7 +740,7 @@ module codeRR.Feedback {
 To get the frontend working one need to configure routes so that the SPA library knows what to display and when.
 
 ```csharp
-var spa = new Griffin.Yo.Spa.SpaEngine('codeRR');
+var spa = new Griffin.Yo.Spa.SpaEngine('Coderr');
 
 // add support for bootstrap modals
 spa.addTarget('BootstrapModal', new Griffin.Yo.Routing.ViewTargets.BootstrapModalViewTarget());

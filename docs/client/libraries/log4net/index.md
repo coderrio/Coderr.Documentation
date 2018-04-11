@@ -1,11 +1,11 @@
 log4net integration
 ================
 
-The log4net library injects codeRR into the logging pipeline of log4net. Each time you log something and include an exception it will be reported to codeRR. This is by far the easiest way to use the power of codeRR in legacy applications (which use log4net).
+The log4net library injects Coderr into the logging pipeline of log4net. Each time you log something and include an exception it will be reported to Coderr. This is by far the easiest way to use the power of Coderr in legacy applications (which use log4net).
 
 # Setup
 
-You need to have installed the codeRR server somewhere and created an application in it. Once you've done that you'll have a `appKey` and a `sharedSecret` which you can configure below.
+You need to have installed the Coderr server somewhere and created an application in it. Once you've done that you'll have a `appKey` and a `sharedSecret` which you can configure below.
 
 Add the following code somewhere before the first logger is retrieved.
 
@@ -32,9 +32,9 @@ catch (Exception ex)
 }
 ```
 
-.. the exception will be picked up in codeRR.
+.. the exception will be picked up in Coderr.
 
-As a bonus you will also see information about the log entry in codeRR:
+As a bonus you will also see information about the log entry in Coderr:
 
 ![](contextinfo.png)
 

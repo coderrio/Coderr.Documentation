@@ -33,7 +33,7 @@ WinForms have to built in context collections
 
 ### OpenForms
 
-codeRR collects information from all open forms using reflection. 
+Coderr collects information from all open forms using reflection. 
 
 The information includes all controls and their configuration (position, content, visibility etc)
 

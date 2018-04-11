@@ -1,7 +1,7 @@
 Building a new feature
 ========================
 
-New features should be added in the `codeRR.Api` and `codeRR.App` projects under the "Modules" namespace.
+New features should be added in the `Coderr.Api` and `Coderr.App` projects under the "Modules" namespace.
 
 You typically start by adding a new event handler. They are defined like this:
 
@@ -22,7 +22,7 @@ event handlers are run in isolation, if one fails the others will not be aborted
 
 # Creating and implementing an API
 
-If you want to expose an API you define it in the `codeRR.Api` project and then implement the handlers in `codeRR.App`.
+If you want to expose an API you define it in the `Coderr.Api` project and then implement the handlers in `Coderr.App`.
 
 For instance you might define a command as `BlockUser` with the following structure:
 
@@ -47,7 +47,7 @@ Three design decisions to be aware of:
 
 1. Mandatory fields should be included in the constructor
 2. A default constructor must be available for serialization (but is in most cases set to protected)
-3. Encapsulation is important in codeRR, use private setters if possible, even on DTOs
+3. Encapsulation is important in Coderr, use private setters if possible, even on DTOs
 
 Once done you need to implement a handler:
 
@@ -67,5 +67,5 @@ in the web project.
 
 # Data layer
 
-codeRR uses the repository pattern for the write side, while the query handlers typically uses ADO.NET directly (and is therefore located in the DB projects).
+Coderr uses the repository pattern for the write side, while the query handlers typically uses ADO.NET directly (and is therefore located in the DB projects).
 

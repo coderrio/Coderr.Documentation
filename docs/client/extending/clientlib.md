@@ -11,7 +11,7 @@ Example from the ASP.NET MVC5 extension:
 
 ```csharp
 // Note that it's in the base library's namespace (for intellisense discovery)
-namespace codeRR.Client
+namespace Coderr.Client
 {
     public static class ConfigurationExtensions
     {

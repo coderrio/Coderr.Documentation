@@ -1,9 +1,9 @@
-codeRR.Client configuration
+Coderr.Client configuration
 ===========================
 
 Install the nuget package called `coderr.client`, if you haven't already.
 
-Next, you need to tell the codeRR library what server it should upload all error reports to.
+Next, you need to tell the Coderr library what server it should upload all error reports to.
 
 Please add the following code in your `Program.cs` (or the starting point of the framework that you use).
 

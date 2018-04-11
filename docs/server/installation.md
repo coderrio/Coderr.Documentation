@@ -1,7 +1,7 @@
 Installation
 ==============
 
-1. Start by [downloading](https://github.com/coderrapp/codeRR.Server/releases) the latest release.
+1. Start by [downloading](https://github.com/coderrapp/Coderr.Server/releases) the latest release.
 2. Unzip it
 3. Open IIS management console
 4. Create a new application in IIS<br> 

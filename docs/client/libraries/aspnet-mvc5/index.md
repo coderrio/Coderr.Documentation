@@ -1,7 +1,7 @@
 ASP.NET MVC 5 Integration
 =========================
 
-This client library will provide both ASP.NET and MVC with specific context information for codeRR.
+This client library will provide both ASP.NET and MVC with specific context information for Coderr.
 
 
 # Features
@@ -25,7 +25,7 @@ You can include your own views instead of the built in pages.
 *Example*
 
 ```html
-@model codeRR.Client.AspNet.Mvc5.CoderrViewModel
+@model Coderr.Client.AspNet.Mvc5.CoderrViewModel
 
 <h1>Internal Server Error</h1>
 <p>
@@ -51,7 +51,7 @@ Create it like any other controller in the Controllers folder.
 
 The action methods should be name like the views. i.e. `public ActionResult InternalServer()`.
 
-The information provided by codeRR is represented as `CoderrViewModel`. Take it as a parameter to your action methods.
+The information provided by Coderr is represented as `CoderrViewModel`. Take it as a parameter to your action methods.
 
 **Sample**
 

@@ -3,7 +3,7 @@ WPF configuration
 
 Install the nuget package called `coderr.client.wpf`, if you haven't already.
 
-Next, you need to tell the codeRR library what server it should upload all error reports to.
+Next, you need to tell the Coderr library what server it should upload all error reports to.
 
 Please add the following code in your `App.xaml.cs`.
 
@@ -29,16 +29,16 @@ public void YourButton_Click()
     }
     catch (Exception ex)
     {
-        _logger.Error("Testing codeRR", ex);
+        _logger.Error("Testing Coderr", ex);
     }
 }
 ```
 
-The error should appear in the codeRR server shortly after being reported.
+The error should appear in the Coderr server shortly after being reported.
 
 ## More information
 
-Did you know that codeRR can also take screenshots of your application forms when an error is detected? 
+Did you know that Coderr can also take screenshots of your application forms when an error is detected? 
 
 Or display error pages like the one below?
 

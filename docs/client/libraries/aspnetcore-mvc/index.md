@@ -1,7 +1,7 @@
 ASP.NET Core MVC
 ================
 
-This client library will provide both ASP.NET and MVC with specific context information for codeRR.
+This client library will provide both ASP.NET and MVC with specific context information for Coderr.
 
 
 # Features

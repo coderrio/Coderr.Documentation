@@ -63,8 +63,8 @@ The context is different for each Coderr client library. Here is a list of all a
 
 Client name | URL
 ----------- | ---------
-Base library | [Github link](https://github.com/coderrapp/codeRR.Client/blob/master/src/Coderr.Client/Reporters/ErrorReporterContext.cs)
-ASPNET | [Github link](https://github.com/coderrapp/codeRR.Client.AspNet/blob/master/src/Coderr.Client.AspNet/HttpErrorReporterContext.cs)
-ASPNET MVC5 | [Github link](https://github.com/coderrapp/codeRR.Client.AspNet.Mvc5/blob/master/src/Coderr.Client.AspNet.Mvc5/AspNetMvcContext.cs)
-WPF | [Github link](https://github.com/coderrapp/codeRR.Client.WPF/blob/master/src/Coderr.Client.Wpf/WpfErrorReporter.cs)
-WinForms | [Github link](https://github.com/coderrapp/codeRR.Client.WinForms/blob/master/src/Coderr.Client.WinForms/WinformsErrorReportContext.cs)
+Base library | [Github link](https://github.com/coderrapp/Coderr.Client/blob/master/src/Coderr.Client/Reporters/ErrorReporterContext.cs)
+ASPNET | [Github link](https://github.com/coderrapp/Coderr.Client.AspNet/blob/master/src/Coderr.Client.AspNet/HttpErrorReporterContext.cs)
+ASPNET MVC5 | [Github link](https://github.com/coderrapp/Coderr.Client.AspNet.Mvc5/blob/master/src/Coderr.Client.AspNet.Mvc5/AspNetMvcContext.cs)
+WPF | [Github link](https://github.com/coderrapp/Coderr.Client.WPF/blob/master/src/Coderr.Client.Wpf/WpfErrorReporter.cs)
+WinForms | [Github link](https://github.com/coderrapp/Coderr.Client.WinForms/blob/master/src/Coderr.Client.WinForms/WinformsErrorReportContext.cs)

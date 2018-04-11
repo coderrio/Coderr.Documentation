@@ -3,7 +3,7 @@ ASP.NET configuration
 
 Install the nuget package called `coderr.client.aspnet`, if you haven't already.
 
-Next, you need to tell the codeRR library what server it should upload all error reports to.
+Next, you need to tell the Coderr library what server it should upload all error reports to.
 
 Please add the following code in your `global.asax`.
 
@@ -14,7 +14,7 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-To get codeRR to automatically report all unhandled exceptions you need to add the following in `global.asax`.
+To get Coderr to automatically report all unhandled exceptions you need to add the following in `global.asax`.
 
 ```csharp
 Err.Configuration.CatchAspNetExceptions();

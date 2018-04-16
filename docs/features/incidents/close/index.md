@@ -1,7 +1,8 @@
 Close incidents
 ================
 
-You close incidents to tell that it's been corrected.
+You close incidents to tell Coderr that it's been corrected.
+Once closed, Coderr will ignore all incoming error reports for versions less or equal to the one you specified.
 
 ![](close-dialog.png)
 

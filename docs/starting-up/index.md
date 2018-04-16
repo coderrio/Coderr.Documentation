@@ -45,7 +45,7 @@ If you successfully have completed step 1 and 2 above, then you will reach the "
 
 We have created an application entity for you, to allow you to get started more quickly. You can at a later point change the name of it (using the administration area).
 
-But for you, continue to the next step.
+But for now, continue with the next step.
 
 # 5. Configuring your application
 

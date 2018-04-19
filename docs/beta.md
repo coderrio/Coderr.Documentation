@@ -3,7 +3,7 @@ New release of Coderr Community Server available on April 30th
 
 On April 30th we will be releasing a new improved open source version of Coderr. To find out more what it contains, please go to [our webpage](https://coderr.io/v2/) to read  about our new release.
 
-![](screens/analyze-incident.png)
+![](../screens/analyze-incident.png)
 
 If you cannot wait to try the new version, you have two options of getting started earlier: 
 

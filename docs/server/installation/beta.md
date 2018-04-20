@@ -1,5 +1,5 @@
-Installation.md
-
+Beta installation
+=========================
 
 ## Prerequisite
 
@@ -12,7 +12,7 @@ Coderr is now built using ASP.NET Core MVC. Make sure that you have installed th
 5. Stop IIS, run "net stop was /y" from a command promt
 6. Start IIS, run "net start w3svc" from a command prompt.
 
-[You can also read \[Microsofts guide]](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/index?tabs=aspnetcore2x&view=aspnetcore-2.1))
+[You can also read \[Microsofts guide\]](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/index?tabs=aspnetcore2x&view=aspnetcore-2.1))
 
 
 ## Installation

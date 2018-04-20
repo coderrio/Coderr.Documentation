@@ -15,11 +15,13 @@ Coderr is now built using ASP.NET Core MVC. Make sure that you have installed th
 [You can also read \[Microsofts guide\]](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/index?tabs=aspnetcore2x&view=aspnetcore-2.1))
 
 
+You should have received a download link from us. If not, email [hello@coderr.io](mailto:hello@coderr.io).
+
 ## Installation
 
 Instruction for installing Coderr for the first time.
 
-1. Download the [installation zip file](http://194.14.207.18/Coderr.CommunityServer.2.0-beta01.zip).
+1. Download the installation zip file.
 2. Unpack it to a IIS folder (for instance `c:\wwwroot\inetpub\coderr\`).
 3. Open `appsettings.json` and change `"changeThis"` value to your own installation password.
 4. Create a database in your SQL Server (SQL Server 2012 or above).
@@ -31,7 +33,7 @@ Instruction for installing Coderr for the first time.
 
 Upgrade from an earlier version of Coderr.
 
-1. Download the [installation zip file](http://194.14.207.18/Coderr.CommunityServer.2.0-beta01.zip).
+1. Download the installation zip file.
 2. Copy your connection string from `web.config` and store it somewhere.
 3. Delete ALL files from your existing Coderr folder.
 4. Unpack all files from the zip file to your Coderr folder

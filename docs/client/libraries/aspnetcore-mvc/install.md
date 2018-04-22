@@ -28,7 +28,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 }
 ```
 
-For MVC errors:
+For MVC specific errors:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -43,7 +43,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Once configured, start your application and try manually to report an exception.
 
-You can for example add the following code somewhere and then invoke your controller action:
+You can for example add the following code somewhere and then invoke a controller action:
 
 ```csharp
 try
@@ -58,6 +58,6 @@ catch (Exception ex)
 
 ## More information
 
-The MVC library can report all invalid model states, track failed login attempts and more.
+The MVC library can report all invalid model states, track failed login attempts and more. For additional configuration options and to learn more about this library, read the [ASP.NET Core MVC client documentation](index.md) 
 
-If you want more information, read the [ASP.NET Core MVC client documentation](index.md) or on error reporting [report errors](../../gettingstarted.md)
+To learn more about manually reporting errors, read our [reporting guide](../../gettingstarted.md).

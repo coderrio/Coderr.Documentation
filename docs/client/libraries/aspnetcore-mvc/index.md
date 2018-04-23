@@ -1,14 +1,22 @@
 ASP.NET Core MVC
 ================
 
-Our ASP.NET Core MVC integration will of course report all unhandled ASP.NET and MVC exceptions. But it can also report if something goes too slow or if there are too many authentication failures.
+This documentation is for the ASP.NET Core MVC library. You can find out other libraries [here](../).
 
-If you need help installing the nuget package, read our [installation guide](./install/).
+This library will report all unhandled ASP.NET and MVC exceptions. It can also report if something goes too slow or if there are too many authentication failures.
+
+# Prerequisites
+
+* You need to have created an account at [Coderr Live](https://lobby.coderr.io) or installed one of our local servers.
+* You should also have installed and configured the ASP.NET Core MVC [nuget library](https://www.nuget.org/packages/Coderr.Client.AspNetCore.Mvc/).
+* If you need help installing the nuget package, read our [installation guide](./install/).
 
 
 # Configuration options
 
-These are the additional configuration options that you can activate in Coderr.
+There are a couple of configuration options that are specific for this library. You can read below to learn more about them.
+
+If you are using Coderr Live, you can also configure the [prioritization](https://coderr.io/documentation/features/partitions/) feature.
 
 ## Track invalid model states
 
@@ -36,7 +44,7 @@ Slow requests lower the overall user experience. Coderr allows you to set a thre
 
 It's great if you do not want to do performance monitoring but still want to make sure that your application is responsive enough.
 
-To activate the feature, add the following line:
+To activate the feature, add the following line to your startup code:
 
 ```csharp
 var maxTime = TimeSpan.FromMilliseconds(500);
@@ -49,7 +57,7 @@ Err.Configuration.TrackSlowRequests(maxTime);
 
 Are you interested in all failed authentication attempts? If activated, this feature will report all requests with the `Authorization` header if it get a 401 as a response. [Learn more about HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication).
 
-Activate this feature by using:
+Activate the feature by using:
 
 ```
 Err.Configuration.TrackAuthenticationFailures();
@@ -60,9 +68,9 @@ Example incident:
 ![](authentication-incident.png)
 
 
-## Report javascript errors
+## Report JavaScript errors
 
-This library can report javascript errors.
+This library can report JavaScript errors.
 
 To activate the feature simply include our built in script in your `_Layout.cshtml`:
 
@@ -70,13 +78,13 @@ To activate the feature simply include our built in script in your `_Layout.csht
 <script src="/coderr/js/"></script>
 ```
 
-Once done, all unhandled javascript errors will be reported to Coderr.
+Once done, all unhandled JavaScript errors will be reported to Coderr.
 
 ![](javascript-incident.png)
 
-### Javascript context collections
+### JavaScript context collections
 
-The following collections are included for Javascript errors.
+The following collections are included for JavaScript errors.
 
 ![](js-collections/document.png)
 
@@ -90,8 +98,6 @@ The following collections are included for Javascript errors.
 ## Context collections
 
 These collections are included for all ASP.NET Core MVC exceptions.
-
-To learn more about the included ASP.NET specific context collections like HTTP Request, [read here](../aspnet/index.md)
 
 
 ### ActionDescriptor
@@ -163,4 +169,6 @@ Result:
 
 # Links
 
-* [Reporting errors](../../)
+We have a guide for [reporting errors](../../) manually. Read it to get the most out of Coderr.
+
+You can also attach your own context information by building a custom [context provider](https://coderr.io/documentation/client/extending/contextprovider/). 

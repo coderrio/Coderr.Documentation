@@ -12,39 +12,37 @@ This library will report all unhandled ASP.NET and MVC exceptions. It can also r
 * If you need help installing the nuget package, read our [installation guide](./install/).
 
 
-# Configuration options
+# Customization options
 
-There are a couple of configuration options that are specific for this library. You can read below to learn more about them.
+There are some additional customization options to those above, that you can use in Coderr. Below we show how to track invalid model states, track slow requests, track authentication failures, report JavaScript errors and understand the included context collections in Coderr and ASP.NET.
 
 If you are using Coderr Live, you can also configure the [prioritization](https://coderr.io/documentation/features/partitions/) feature.
 
-## Track invalid model states
+## Tracking invalid model states
 
-When activated, Coderr will report all invalid model states.
+Invalid model states is a good indication of the quality of your user interface for reporting errors. If many of the users fail to submit forms properly, it clearly shows that they either don't know what they should enter, the forms are unclear or a combination thereof.
 
-Are your user interface as good as you think? Invalid model states give you a clear indication to if it is. If many of your users fail to submit your forms properly it clearly indicates that they either don't know what they should enter, or than your forms have too many fields.
-
-To activate it, simply add:
+To activate invalid model states, simply add:
 
 ```csharp
 Err.Configuration.TrackInvalidModelStates();
 ```
 
-Once done you will get one incident per invalid form.
+You will now get one incident reported per invalid form as shown below.
 
 ![](modelstate-incident.png)
 
-The collection itself contains the fields that failed:
+The collection itself contains the fields that was invalid as this:
 
 ![](collections/modelstate.png)
 
-## Track slow requests
+## Tracking slow requests
 
-Slow requests lower the overall user experience. Coderr allows you to set a threshold regarding how long a request may take.
+Slow requests decrease the overall user experience. Coderr allows you to set the threshold for how long a request may take.
 
-It's great if you do not want to do performance monitoring but still want to make sure that your application is responsive enough.
+This is useful if you want to ensure that the application is responsive enough, whilst not doing performance monitoring.
 
-To activate the feature, add the following line to your startup code:
+To set a timing threshold, add the following configuration with your time limit:
 
 ```csharp
 var maxTime = TimeSpan.FromMilliseconds(500);
@@ -53,32 +51,30 @@ Err.Configuration.TrackSlowRequests(maxTime);
 
 ![](slow-request-incident.png)
 
-## Track authentication failures
+## Tracking authentication failures
 
-Are you interested in all failed authentication attempts? If activated, this feature will report all requests with the `Authorization` header if it get a 401 as a response. [Learn more about HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication).
+Coderr can track all failed authentication attempts. If activated, this feature will report all requests with the `Authorization` header when getting a 401 as a response. [Learn more about HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication).
 
-Activate the feature by using:
+To activate tracking authentication failures, use the following line:
 
 ```
 Err.Configuration.TrackAuthenticationFailures();
 ```
 
-Example incident:
+The example below shows how authentication failures are reported:
 
 ![](authentication-incident.png)
 
 
 ## Report JavaScript errors
 
-This library can report JavaScript errors.
-
-To activate the feature simply include our built in script in your `_Layout.cshtml`:
+The ASP.NET Core MVC library can report JavaScript errors. Simply activate this feature, by including the built in script in your `_Layout.cshtml` like this:
 
 ```html
 <script src="/coderr/js/"></script>
 ```
 
-Once done, all unhandled JavaScript errors will be reported to Coderr.
+Now all unhandled JavaScript errors will be reported to Coderr, as follows:
 
 ![](javascript-incident.png)
 
@@ -95,10 +91,9 @@ The following collections are included for JavaScript errors.
 ![](js-collections/screen.png)
 
 
-## Context collections
+## Included context collections in ASP.NET MVC.
 
 These collections are included for all ASP.NET Core MVC exceptions.
-
 
 ### ActionDescriptor
 

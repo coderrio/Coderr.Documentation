@@ -11,7 +11,7 @@ If you cannot wait to try the new version, you have two options of getting start
 
 **Option 2** You can sign up for the Beta 2.0 Program that starts now and means you will get a chance to give feedback and ask questions about Coderr as you run it. All you need to do is send us an email and then we will provide you the downloadable files, with instructions. We will also periodically post further instructions and things we want you to try, at our Beta site, where we encourage you to provide feedback and ask questions. 
 
-Register in our forum and reply on the [beta thread](https://discuss.coderr.io/t/beta-access-applications/44) to get access.
+[Email us](mailto:hello@coderr.io) to get access.
 
 Thank you for your interest in Coderr,<br>
   &nbsp;&nbsp;The Coderr team

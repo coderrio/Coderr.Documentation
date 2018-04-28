@@ -10,7 +10,7 @@ Most of our client libraries support automated reporting. Find out what context 
 
 To fully take advantage of this guide, we recommend you to have installed and configured one of our [client libraries](client/index.md).
 
-You should also have created an account at [Coderr Live](https://app.coderr.io) or in your locally installed [Coderr Community Server](server/installation.md).
+You should also have created an account at [Coderr Live](https://app.coderr.io) or in your locally installed [Coderr Community Server](server/installation/).
 
 # Settings
 

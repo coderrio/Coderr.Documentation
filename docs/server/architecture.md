@@ -779,7 +779,7 @@ The route values with colon prefix like `:applicationId` are picked up by the li
 
 That's it. Hope you enjoyed the show.
 
-If you want to read more you can visit the [online documentation](https://coderrapp.com/documentation/) which consists of everything from guides to API references. You can also [download the server](https://coderrapp.com/download/server/) to try the service. Or browse the [source code](http://github.com/gauffininteractive).
+If you want to read more you can visit the [online documentation](https://coderr.io/documentation/) which consists of everything from guides to API references. You can also [download the server](https://coderr.io/download/server/) to try the service. Or browse the [source code](http://github.com/gauffininteractive).
 
 The code is licensed under the [Reciprocal Public License v1.5](https://opensource.org/licenses/RPL-1.5).
 

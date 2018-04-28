@@ -34,7 +34,7 @@ Instruction for installing Coderr for the first time.
 Upgrade from an earlier version of Coderr.
 
 1. Download the installation zip file.
-2. Copy your connection string from `web.config` and store it somewhere. `<add name="Coderr" connectionString="SAVE THIS STRING ONLY" />`. *(i.e. not the entire XML element but only the attribute contents)*
+2. Copy your connection string from `web.config` and store it somewhere.<br> `<add name="Coderr" connectionString="SAVE THIS STRING ONLY" />`<br> *(i.e. not the entire XML element but only the attribute contents)*
 3. Delete ALL files from your existing Coderr folder.
 4. Unpack all files from the zip file to your Coderr folder
 5. Open `appsettings.json`

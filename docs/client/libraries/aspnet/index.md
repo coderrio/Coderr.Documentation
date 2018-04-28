@@ -130,7 +130,7 @@ If you are just using HTML you can use the following template strings:
     <meta charset="utf-8" />
     <title>An error occurred</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-    <meta name="X-powered-with" content="https://coderrapp.com" />
+    <meta name="X-powered-with" content="https://coderr.io" />
     <style type="text/css">
         /*CssStyles*/
     </style>
@@ -142,7 +142,7 @@ If you are just using HTML you can use the following template strings:
         </div>
         <form method="post" action="$URL$">
             <div class="img">
-                <img src="https://coderrapp.com/images/WebError2.jpg" />
+                <img src="https://coderr.io/images/WebError2.jpg" />
             </div>
             <div class="content">
                 <p>
@@ -178,5 +178,5 @@ If you are just using HTML you can use the following template strings:
 
 # Links
 
-* [ASP.NET API reference](https://coderrapp.com/docs/api/client/aspnet/)
+* [ASP.NET API reference](https://coderr.io/docs/api/client/aspnet/)
 * [Getting started guide](../../gettingstarted.md)

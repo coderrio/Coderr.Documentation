@@ -4,7 +4,7 @@ Client library documentation
 The client libraries are only used to detect unhandled exceptions and to allow you to manually report exceptions.
 They also collect context information and make sure that the error report is uploaded properly.
 
-You also need to either [install Coderr Community Edition](../server/installation.md) or create an account in [Coderr Live](https://coderr.io/live/).
+You also need to either [install Coderr Community Edition](../server/installation/) or create an account in [Coderr Live](https://coderr.io/live/).
 
 # Getting started
 

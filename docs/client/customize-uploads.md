@@ -19,7 +19,7 @@ Remove the `Err.Configuration.Credentials()` line from your code and add the fol
 
 ```csharp
 // Initialization
-var uri = new Uri("https://report.coderrapp.com/");
+var uri = new Uri("https://report.coderr.io/");
 
 var uploader = new UploadToCoderr(uri, "yourOwnAppKey", "yourOwnSharedSecret");
 

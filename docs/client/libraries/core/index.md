@@ -52,5 +52,5 @@ Thread information like specified UI culture.
 
 ## More information
 
-* [Client API reference](https://coderrapp.com/docs/api/client/)
+* [Client API reference](https://coderr.io/docs/api/client/)
 * [Getting started guide](../../gettingstarted.md)

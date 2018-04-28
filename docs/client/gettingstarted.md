@@ -5,7 +5,7 @@ Getting started
 
 This guide assumes that you have installed and configured one of our [nuget](https://www.nuget.org/packages?q=coderr.client) libraries.
 
-You have also created an account at our hosted service [Coderr Live](https://app.coderr.io) or in your installed instance of [Coderr Community Server](../server/installation.md).
+You have also created an account at our hosted service [Coderr Live](https://app.coderr.io) or in your installed instance of [Coderr Community Server](../server/installation/).
 
 ## Simplest possible reporting
 

@@ -1,6 +1,6 @@
 # Coderr.Documentation
 
-The documentation pages (http://coderrapp.com/documentation) for Coderr.
+The documentation pages (http://coderr.io/documentation) for Coderr.
 
 Feel free to contribute with new or updated content.
 

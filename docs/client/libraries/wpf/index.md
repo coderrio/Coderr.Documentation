@@ -81,5 +81,5 @@ Coderr collects information from all viewModels in the open forms.
 # What to do next
 
 * [Getting started guide](../../gettingstarted.md) - Learn more about features in the client library
-* [Coderr Live](https://coderrapp.com/live/) - Read more about our hosted service.
-* [Server installation](https://coderrapp.com/documentation/server/installation.md) - How to install the Community Server (AGPL licensed)
+* [Coderr Live](https://coderr.io/live/) - Read more about our hosted service.
+* [Server installation](https://coderr.io/documentation/server/installation/s) - How to install the Community Server (AGPL licensed)

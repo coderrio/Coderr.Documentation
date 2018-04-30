@@ -6,4 +6,4 @@ You can extend the client library by either creating a new library for your favo
 # Extension points
 
 * [Create a new client library](clientlib.md)
-* [Creating a new context collector](contextprovider.md)
+* [Creating a new context collector](/client/context-provider.md)

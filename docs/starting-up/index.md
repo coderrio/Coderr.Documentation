@@ -21,17 +21,15 @@ If you are creating a new account (the option to the right) and clicked "Registe
 
 # 2. Creating an organizational account
 
-As coderr is intended to be used by organizations with multiple users, you will need to associate your registration with an organization. The future billing is linked to that organization. You either join the already created organization (click "join") or if you are the first from your organization, you will create a new account (click "create").
+You will need to associate your registration with an organization. The future billing is linked to that organization. 
  
 ![](welcome.png)
 
-Please note that the only way to join an existing organization is to receive an invitation email from a colleague who set up the organizational account. The "Join" page is just to inform you of that.
+Please note that the only way to join an existing organization is to receive an invitation email from a colleague who set up the organizational account.
  
-If you clicked "Create" earlier, you can fill in the name of your organization or company (here shown as the test name "Acme Inc.") and then click "Create" once more to associate your registration with an organization. 
+To create a new organization, fill in the name of your organization or company and then click "Create" to associate your registration with an organization. 
 
-![](create-org.png)
-
-coderr is now setting up your database and your account. 
+Coderr is now setting up your database and your account. 
 
 After successfully creating a new organization, you will receive a welcome email from us, confirming your registration.
 

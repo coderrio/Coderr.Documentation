@@ -66,3 +66,19 @@ If you have been successful with testing your configuration by generating an exc
 ![](reported.png) 
 
 In case coderr could not detect your attempted exception, please contact us at [help@coderr.io](help@coderr.io) so that we can assist and investigate what went wrong. 
+
+# 7. Accessing application settings (Optional)
+
+In the previous step you might have noticed that the preconfigured application is named "DemoApp". To change name, use the settings cog in the top right menu.
+
+![](settings-cog.png)
+
+You are now in the system settings. To access application settings, change the application in the top left menu.
+
+![](settings-main.png)
+
+From here you can change the application name.
+
+![](settings-name.png)
+
+You can also invite others and manage application security. Those settings are available under the "Security" option in the settings menu.

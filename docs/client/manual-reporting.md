@@ -78,3 +78,9 @@ catch (Exception ex)
 ![](attach_multiple_collections.png)
 
 Hence you can easily attach and group your information just as you like.
+
+# Creating custom context collections
+
+You can also create custom context collections which will be automatically included with every error report.
+
+[Read more](extending/contextprovider/)

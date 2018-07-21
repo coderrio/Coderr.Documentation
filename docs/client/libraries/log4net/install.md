@@ -1,4 +1,4 @@
-log4net configuration
+log4net configuration instructions
 =====================
 
 Install the nuget package called `coderr.client.log4net`, if you haven't already.

@@ -5,7 +5,7 @@ Install the nuget package called `coderr.client.aspnetcore.mvc`, if you haven't 
 
 Next, you need to tell the Coderr library what server it should upload all error reports to.
 
-Please add the following code in your `Program.cs`.
+Add the following code in your `Program.cs`:
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
@@ -13,6 +13,12 @@ Err.Configuration.Credentials(url,
                               "yourAppKey", 
                               "yourSharedSecret");
 ```
+
+The appKey and the sharedSecret can be found in the Coderr server under the following menu option:
+
+![](../server_settings.png)
+
+Select the correct application in the top left menu and then click on the "Configure your application" option.
 
 To get Coderr to automatically report all unhandled exceptions you need to add the following in `Startup.cs`:
 

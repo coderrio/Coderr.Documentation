@@ -1,8 +1,9 @@
-Getting started with the Coderr client library
+.NET 4.x - Core library information
 =================================
 
 This library is the foundation of all exception reporting done with Coderr. All other client libraries are based upon this one.
 
+To get help installing it, [read here](install.md).
 
 ## Context collections
 

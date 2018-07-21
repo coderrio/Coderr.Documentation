@@ -3,7 +3,7 @@ Creating a custom context provider
 
 Context providers are used to automatically attach information to each error report. The information is useful to determine why an exception have been thrown.
 
-![](context-info.png)
+![](../context-info.png)
 
 To create a provider you need to create a class which implements the context provider interface. In the .NET standard library the interface is named `IContextCollectionProvider` and in .NET (4.x) it's named `IContextInfoProvider`.
 
@@ -81,7 +81,7 @@ A context info provider MUST not throw exceptions. Therefore you need to have a 
 var properties = new Dictionary<string,string>();
 try
 {
-	properties["CurrentUser"] = Thread.CurrentPrincipal.Identity.Name;
+    properties["CurrentUser"] = Thread.CurrentPrincipal.Identity.Name;
 }
 catch (Exception ex)
 {
@@ -98,8 +98,8 @@ You can add tags to error reports by using a context collection property named `
 var properties = new Dictionary<string,string>();
 try
 {
-	properties["CurrentUser"] = Thread.CurrentPrincipal.Identity.Name;
-	property["ErrTags"] = "fatal";
+    properties["CurrentUser"] = Thread.CurrentPrincipal.Identity.Name;
+    properties["ErrTags"] = "fatal";
 }
 catch (Exception ex)
 {

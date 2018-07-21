@@ -1,4 +1,4 @@
-Coderr.Client configuration
+.NET 4.x - Core configuration instructions
 ===========================
 
 Install the nuget package called `coderr.client`, if you haven't already.
@@ -13,6 +13,12 @@ Err.Configuration.Credentials(url,
                               "yourAppKey", 
                               "yourSharedSecret");
 ```
+
+The appKey and the sharedSecret can be found in the Coderr server under the following menu option:
+
+![](../server_settings.png)
+
+Select the correct application in the top left menu and then click on the "Configure your application" option.
 
 Once configured, start your application and try manually to report an exception.
 

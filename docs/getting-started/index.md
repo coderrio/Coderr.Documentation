@@ -66,7 +66,7 @@ A typical error handling flow consists of distinct steps that you need to take w
 ![](steps.png)
 
 1. You need to discover errors. Traditionally it's typically done by scanning log files or by receiving errors reports from users.
-2. Once you receive an error report, you need to see if it's for an already known error or if it's a duplicate error report.
+2. Once you receive an error report, you need to see if it's for an already known error or if for a new one.
 3. When you have a list of errors, you want to work with the most important one. 
 4. When you have selected an error, you need to be able to reproduce it so that you are sure that you are correcting the correct part of the code base.
 5. Once you are sure about the cause, you can correct the error.
@@ -132,7 +132,7 @@ Use the "Close"-action when an incident has been corrected.
 
 Closing incidents tell Coderr to ignore all future error reports for the same error that are for same or older version of the application.
 
-That does however require that you use proper versioning of your application (`[minor].[major].[step/build]`).
+That does however require that you use proper versioning of your application (`[major].[minor].[step/build]`).
 
 ![](close-dialog.png)
 
@@ -144,9 +144,9 @@ Read this section carefully to configure Coderr correctly.
 
 ### Disabling Coderr's internal errors
 
-When getting started with Coderr it makes sense to allow Coderr to throw exceptions if the configuration is invalid or if reports can't be uploaded to the Coderr Server.
+When getting started with Coderr, it makes sense to allow Coderr to throw exceptions if the configuration is invalid or if reports can't be uploaded to the Coderr Server.
 
-Once everything is OKm Coderr should not interfere with your application. Thus, you need to disable Coderr's own ability to throw exceptions.
+Once everything is OK, Coderr should not interfere with your application. Thus, you need to disable Coderr's own ability to throw exceptions.
 
 ```csharp
 Err.Configuration.ThrowExceptions = false;
@@ -156,7 +156,7 @@ Err.Configuration.ThrowExceptions = false;
 
 The main purpose of Coderr is to identify errors in production environments. 
 
-Having Coderr activated in development environments will add errors with lite value. As a developer, you typically have full control of errors happening in developer environments. 
+Having Coderr activated in development environments will doesn't make sense. As a developer, you typically have full control of errors happening in developer environments. 
 
 To keep the error list clean, we recommend that you conditionally activate Coderr.
  

@@ -9,7 +9,7 @@ Coderr is a client/server solution which means that you either need to install a
 
 Coderr Server is available as three different editions.
 
-<table><tr><td valign="top">
+<table><tr><td valign="top" style="width:30%">
 
 ### Coderr Live
 
@@ -17,7 +17,7 @@ Our hosted service with a complete feature set. We make sure that everything is 
 
 [Register an account](https://lobby.coderr.io)
 
-</td><td valign="top">
+</td><td valign="top" style="width:30%">
 
 ### Coderr Premise
 
@@ -25,7 +25,7 @@ Locally installed server with a complete feature set, Activate Directory support
 
 [Download]()
 
-</td><td valign="top">
+</td><td valign="top" style="width:30%">
 
 ### Coderr Community Server
 
@@ -51,7 +51,7 @@ You can use them directly or install one of our automation libraries.
 
 ## Automation libraries
 
-If you want Coderr to detect and report all unhandled exceptions you can use our automation libraries. These libraries will not just detect exceptions but also collect information related to the error like HTTP requests, screenshots, view models and more. The goal is to make it easy to understand why the exception was thrown.
+Coderr can detect and report all unhandled exceptions (and other types of errors). To activate that feature you need to install one of our automation libraries. Once done Coderr will detect exceptions and collect information related to the error like HTTP requests, screenshots, view models and more. The goal is to make it easy to understand why the exception was thrown.
 
 When you start using Coderr, it's typically not crucial that you log relevant information using your logging library, as Coderr typically includes all information that you need to understand the error.
 
@@ -73,19 +73,19 @@ A typical error handling flow consists of distinct steps that you need to take w
 
 Coderr helps with all steps above except the last one. 
 
-To make it easier to work with Coderr, there are three main sections in Coderr that you need to understand.
+Coderr have been designed with that flow in mind to make it as easy as possible to identify, priortize and correct errors. There are three main sections.
 
 ![](topmenu.png)
 
 * **Discover** - The starting point in Coderr. Used to find the incidents that should be corrected first. Once you found one, click "Assign to me" on it.
 * **Analyze** - All incidents assigned to you will be found here, including all collected context data.
-* **Deployment insights** - See how well your team has handled errors in each application release. Do the number of unique errors increase or decrease?
+* **Deployment insights** - See how well your team has handled errors in each application release. Do the number of distinct errors increase or decrease?
 
 All data can be filtered by using the application selection menu which can be seen to the far left. Click on it to see errors for one application only or for all applications.
 
 ## Finding errors to work with
 
-Use the "Discover" menu to find errors to correct. This section shows how many errors you have, how often they are occur and other information 
+Use the "Discover" menu to find errors to correct. This section shows the number of errors per application, how often they have occurred and other information about how they affect your system.
 
 
 ### Suggestions / Prioritization
@@ -132,7 +132,7 @@ Use the "Close"-action when an incident has been corrected.
 
 Closing incidents tell Coderr to ignore all future error reports for the same error that are for same or older version of the application.
 
-That does however require that you use proper versioning of your application (`[major].[minor].[step/build]`).
+That requires that you use proper versioning in your application (`[major].[minor].[step/build]`).
 
 ![](close-dialog.png)
 
@@ -156,7 +156,7 @@ Err.Configuration.ThrowExceptions = false;
 
 The main purpose of Coderr is to identify errors in production environments. 
 
-Having Coderr activated in development environments will doesn't make sense. As a developer, you typically have full control of errors happening in developer environments. 
+As a developer, you typically have full control of errors happening in developer environments. Thus it doesn't make sense to have Coderr  activated in development environments. 
 
 To keep the error list clean, we recommend that you conditionally activate Coderr.
  

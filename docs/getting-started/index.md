@@ -57,7 +57,8 @@ When you start using Coderr, it's typically not crucial that you log relevant in
 
 To get help to install and configure our nuget libraries, read the  article below.
 
-[Using the client libraries](/client/)
+[Using the client libraries](https://coderr.io/documentation/client/)
+[Reporting errors](https://coderr.io/documentation/)
 
 # Working with Coderr
 

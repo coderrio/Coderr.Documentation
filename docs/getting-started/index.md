@@ -5,6 +5,12 @@ This document gives a technical overview of Coderr, installation help and how yo
 
 # Installing the server
 
+Coderr requires both that you install one or more of our nuget packages and that you use one of our server versions.
+
+* [Coderr Community Server](https://github.com/coderrio/coderr.server) - Open Source, AGPL license.
+* [Coderr Live](https://lobby.coderr.io) - Our hosted service (free up to 500 error reports / month).
+* [Coderr Premise](https://coderr.io/features/premise) - Locally installed server with a complete feature set (including enterprise features).
+
 Coderr is a client/server solution which means that you either need to install a server somewhere or use our hosted solution.
 
 Coderr Server is available as three different editions.
@@ -13,7 +19,7 @@ Coderr Server is available as three different editions.
 
 ### Coderr Live
 
-Our hosted service with a complete feature set. We make sure that everything is running and that the latest stable version is installed.
+Hosted service. Free for up to five users and up to 500 error reports per month.
 
 [Register an account](https://lobby.coderr.io)
 
@@ -21,15 +27,15 @@ Our hosted service with a complete feature set. We make sure that everything is 
 
 ### Coderr Premise
 
-Locally installed server with a complete feature set, Activate Directory support, team management and windows authentication.
+Locally installed server with a complete feature set (including enterprise features).
 
-[Download]()
+[Download](https://coderr.io/features/premise)
 
 </td><td valign="top" style="width:30%">
 
 ### Coderr Community Server
 
-Open source server.
+Open source server, AGPL license.
 
 [Github page](https://github.com/coderrio/coderr.server)
 
@@ -37,30 +43,89 @@ Open source server.
 
 Choose one and make sure that you have either registered an account or installed it. You can also [compare the editions](https://coderr.io/features/compare/).
 
-# Configuring your application
+# Reporting first error
 
-To let Coderr discover errors and collect information about them you need to install one of our nuget packages in your application. We support both .NET Standard and .NET 4.x.
+Install or use one of the servers above.
 
-We have two types of nuget packages. 
+Once installed, you need to configure one of our nuget packeges.
+The packages are [listed here](./client/libraries/). Choose one and install it using nuget.
 
-## Core libraries
+To configure Coderr you need to get an `appKey` and a `sharedSecret` from the server. Use a web browser and visit your Coderr Server. A default application have been created in Coderr and let's use that one when reporting the first errors.
 
-Our core nuget libraries [Coderr.Client](https://coderr.io/documentation/client/libraries/core/) (.NET 4.x base library) and [Coderr.Client.NetStd](https://coderr.io/documentation/client/libraries/netstd/install.md) (.NET Standard 1.6 and above) are used to report and upload errors to the Coderr server. 
+In the top menu, use the drop down list and select "DemoApp".
 
-You can use them directly or install one of our automation libraries.
+![](topmenu.png)
 
-## Automation libraries
+Now click on "Configure your application" in the sub menu:
 
-Coderr can detect and report all unhandled exceptions (and other types of errors). To activate that feature you need to install one of our automation libraries. Once done Coderr will detect exceptions and collect information related to the error like HTTP requests, screenshots, view models and more. The goal is to make it easy to understand why the exception was thrown.
+![](menu-configureapp.png)
 
-When you start using Coderr, it's typically not crucial that you log relevant information using your logging library, as Coderr typically includes all information that you need to understand the error.
+Select the .NET library that you are using.
 
-To get help to install and configure our nuget libraries, read the  article below.
+![](configure-app.png)
 
-[Using the client libraries](https://coderr.io/documentation/client/)
-[Reporting errors](https://coderr.io/documentation/)
 
-# Working with Coderr
+Copy the highlighted code into your application. Coderr is now ready to report errors.
+Each automation library requires one or two additional lines for the automatic error detection. It's typically something in line with `Coderr.Configuration.CatchMvcExceptions()´. The readme file included in the nuget package contains more information.
+
+To make sure that everything works, let's do a quick test. Paste this into the starting point (like Main in `Program.cs`).
+
+```csharp
+try
+{
+    throw new InvalidOperationException("Hello world");
+}
+catch (Exception ex)
+{
+    Err.Report(ex, new { ErrTags = "backend", User = new { Id = 10, FirstName = "Arne" }});
+}
+```
+
+## Finding the first error
+
+Visit the Coderr server web. The first page should now contain a reported error:
+
+![](first-dashboard.png)
+
+To see the error, click on the "Incidents" link to open the search page.
+
+![](search-page.png)
+
+Since we included user information in the error report, we could also have searched for that user:
+
+![](search-context-data.png)
+
+* Learn more about [context data](../features/incidents/context-data/)
+
+Click on the incident in the search result.
+
+![](discover-incident.png)
+
+This view is only used to determine which errors to work with. Notice that Coderr include application version and which environment (in this case "Production") that the error was reported for. The tag, "backend", is also visible. Tags are typically used to group errors together. Coderr automatically include different tags like "ado.net", "entity-framework" etc. It all depends to where the exception was thrown.
+
+* Learn more about [tags](../features/incidents/tagging/)
+* Learn more about [environment tracking](../features/incidents/environments/)
+
+All collected information will be available once you have clicked on the "Assign to me" button. Do it now.
+
+## Solving the first error
+
+![](analyze-incident.png)
+
+The context data is available down right. The information that you included yourself is automatically displayed. But there are several other context collections avilable in the dropdown menu. You can for instance see used memory, Windows version, which assemblies (and their versions your application ran etc.
+
+Once you have corrected the error, click the "Close incident" button.
+
+![](close-incident.png)
+
+By entering a version number, Coderr will automatically ignore all error reports for the same error if the reported version is less or equal with the specified version. That way, there is no need to check if the reported error have already been corrected.
+
+* Learn more about [closing incidents](../features/incidents/close)
+
+
+# Where to go next
+
+
 
 A typical error handling flow consists of distinct steps that you need to take when working with errors.
 

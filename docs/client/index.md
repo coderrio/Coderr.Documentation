@@ -2,7 +2,7 @@ Client library documentation
 ============
 
 
-Coderr cannot discover errors nor collect information about unless one of Coderr nuget packages are installed.
+Coderr cannot discover errors nor collect information about unless one of Coderr's nuget packages are installed.
 
 ## Core libraries
 
@@ -14,7 +14,9 @@ You can use them directly if you do not want to take advantage of our automation
 
 ## Automation libraries
 
-Coderr can detect and report all unhandled exceptions (and other types of errors), along with information about why the exception was thrown. Once installed, Coderr will detect exceptions and collect information related to the error like HTTP requests, screenshots, view models and more. The goal is to make it easy to understand why an exception was thrown.
+Coderr can detect and report all unhandled exceptions (and other types of errors), along with information about why the exception was thrown. The automation libraries can also report other kinds of errors like validation failures or slow requests.
+
+Once installed, Coderr will detect exceptions and collect information related to the error like HTTP requests, screenshots, view models and more. The goal is to make it easy to understand why an exception was thrown without manual handling.
 
 
 Name | Description
@@ -30,32 +32,39 @@ Coderr.client.wcf | Catches unhandled exceptions in the WCF pipeline. Collects W
 [Coderr.client.winforms](libraries/winforms/index.md) | Reports all unhandled exceptions. Can take screen shots and collect the state of all open forms.
 [Coderr.client.WPF](libraries/wpf/index.md) | Reports all unhandled exceptions. Can take screen-shots and collect the state of all open windows and includes the state of all your active view models.
 
-If your favorite library isn't listed, you can either create your own or use the core library (`Coderr.client`) to report exceptions
-
-
-
-When you start using Coderr, it's typically not crucial that you log relevant information using your logging library, as Coderr typically includes all information that you need to understand the error.
+If your favorite library isn't listed, you can either create your own, request one in our [forum](https://discuss.coderr.io) or use the core library (`Coderr.client`) to report exceptions.
 
 To get help to install and configure our nuget libraries, read the  article below.
 
-[Using the client libraries](https://coderr.io/documentation/client/)
-[Reporting errors](https://coderr.io/documentation/)
+The client library requires that a server is used. Install one or use our hosted service. [More information](../).
 
-The client libraries are only used to detect unhandled exceptions and to allow you to manually report exceptions.
-They also collect context information and make sure that the error report is uploaded properly.
-
-You need to either [install Coderr Community Edition](../server/installation/) or create an account in [Coderr Live](https://coderr.io/live/).
 
 # Getting started
 
-Our [Getting started](/) shows how you install and configure the client libraries and how you can report exceptions and attach custom context collections (like including method arguments or view models).
+Our [Getting started](../getting-started/) guide shows how to install and configure the client libraries and how you can report exceptions and attach custom context collections (like including method arguments or view models).
 
-# Extending
+# Controlling report uploads
 
-Learn how you can create your own context collections and build your own client library.
+Reports that fail to upload are thrown away by default, to avoid interfering with your application.
 
-[Extending](extending/)
+To enable queued report uploads, use the following configuration line to activate it:
 
-# Integration libraries
+```csharp
+Err.Configuration.QueueReports = true;
+```
 
-We currently have integrations for the following .NET libraries:
+When reports are being uploaded, the queue makes sure that your UI-unresponsiveness is unaffected.
+
+There is more information about how to control the error report uploads in our [customizing uploads guide](customize-uploads).
+
+## Adding your own automated context providers
+
+In your own application you probably have system specific information that you always want to include when errors are reported. For example `tenantId`,  `customerId` or the logged-in user.
+
+That can be done by creating a [Context Data Provider](extending/contextprovider)
+
+# Building a new library
+
+Learn how you can build your own client library for your own favorite .NET project.
+
+[New client library](extending/clientlib)

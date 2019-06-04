@@ -1,36 +1,45 @@
-Partitions
-===========
+Custom insights
+===============
 
-Partitions are used to segment incidents to be able to better prioritize which incidents to correct next.
+Custom insights are used to see how errors affects your business. You can for instance use insights to see how many servers, IoT devices or users that a specific error affects. Coderr will also recommend which errors to work with based on your custom insights.
 
-A typical usage is to be able to tell the impact what each incident have on your system or users.
+![](recommendations.png)
 
-![](../screens/suggestions.png)
+In the above example, "Users" and "Servers" have been defined as custom insights.
 
-In the above example we have specified that we have 50 users in the system and Coderr is therefore able to tell that this specific incident affect 5% of our users.
+# Activating
 
-We have also said that we have three database servers and can therefore see that the invalid SQL statement have only been reported from one of them.
-
-# Adding partitions to incidents
-
-The minimal configuration is to attach partitions to each reported incident.
-
-In the following example we want to prioritize errors based on how many installations and users that each incident affects.
-
-To do that we add the following configuration to our code:
+To enable insights, use the `AddPartition` method in the client library to define it.
 
 ```csharp
 Err.Configuration.AddPartition(context => 
 {
-  context.AddPartition("InstallId", ConfigurationManager.AppSetting["InstallId"]);
-  context.AddPartition("UserName", Thread.CurrentPrincipal.Identity.Name);
+  // See how many installations are affected
+  context.AddPartition("Installations", ConfigurationManager.AppSetting["InstallationId"]);
+
+  // See number of affected users
+  context.AddPartition("Users", Thread.CurrentPrincipal.Identity.Name);
 });
 ```
 
-That's everything required. Report an error to see the information under the reported incident. 
+The `context` parameter gives access to all collected data.
 
-You can also go to "My incidents" in the left menu to see suggestions based on your configured partitions.
+```csharp
+Err.Configuration.AddPartition(context =>
+{
+    var collection = context
+            .ReporterContext
+            .ContextCollections
+            .FirstOrDefault(x => x.Name == "LoggedInUser");
+    if (collection != null)
+    {
+        var userId = collection.Properties["Id"];
+        context.AddPartition("Users", userId);
+    }
+});
+```
 
+_(You can add [your own context collections](../../client/extending/context-provider/) to every report)_
 
 # Improving suggestions
 

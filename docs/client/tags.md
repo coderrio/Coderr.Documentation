@@ -18,20 +18,19 @@ catch (Exception ex)
     // Err.Report(ex, new { ErrTags = new[] { "important", "backend" }});
 }
 ```
-## Deployment tag
+## Add a tag to every report
 
-You might also want to add a tag which tells which environment (Production, Test, Dev) that the error was thrown in. This can be easily done by using a [custom context provider](context-provider.md).
+You might also want to add which contains the server name. This can be easily done by using a [custom context provider](extending/contextprovider.md).
 
 ```csharp
-public class EnvironmentTagProvider : IContextInfoProvider
+public class ServerNameProvider : IContextInfoProvider
 {
-    public string Name => "Environment";
+    public string Name => "ServerName";
 
     public ContextCollectionDTO Collect(IErrorReporterContext context)
     {
-        var environment = ConfigurationManager.AppSettings["Environment"] ?? "Dev";
         var properties = new Dictionary<string, string>();
-        properties.Add("ErrTags", environment);
+        properties.Add("ErrTags", Environment.MachineName);
 
         return new ContextCollectionDTO(Name, properties);
     }
@@ -43,7 +42,7 @@ The .NET Standard version of the interface is named `IContextCollectionProvider`
 To activate it the provider
 
 ```csharp
-Err.Configuration.ContextProviders.Add(new EnvironmentTagProvider());
+Err.Configuration.ContextProviders.Add(new ServerNameProvider());
 ```
 
 ## Finding incidents using tags

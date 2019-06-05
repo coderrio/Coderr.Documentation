@@ -53,31 +53,6 @@ catch (Exception ex)
 
 Complex structures are supported.
 
-### Custom context collections
-
-We also have an object overload which can transform any object into a context collection (one of the groups in the "Context Data" menu in the Coderr website).
-
-Below we are using `ToContextCollection()` extension method which can transform any object (including complex objects) into a context collection.
-
-
-```csharp
-try
-{
-    //some stuff that generates an exception
-}
-catch (Exception ex)
-{
-    var modelCollection = viewModel.ToContextCollection("ViewModel");
-    var loggedInUser = User.ToContextCollection("User");
-    Err.Report(ex, new[]{modelCollection, loggedInUser});
-}
-```
-
-**Result**
-
-![](attach_multiple_collections.png)
-
-Hence you can easily attach and group your information just as you like.
 
 # Creating custom context collections
 

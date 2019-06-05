@@ -1,1 +1,0 @@
-This document have [moved](extending/contextprovider.md).

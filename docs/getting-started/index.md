@@ -81,8 +81,8 @@ The search feature allows you to quickly find the next error to solve.
 The following search options are available:
 
 * _**Free text**_ searches through the entire error reports after the given information.
-* _**[Application environments](../features/environments)**_ allows you to find errors that exists in a specific environment (like production).
-* _**[Tags](../features/incidents/tagging)**_ are used to categorize errors to allow developers to correct a specific type of error (depending on expertize).
+* _**[Application environments](../features/incidents/environments)**_ allows you to find errors that exists in a specific environment (like production).
+* _**[Tags](../features/incidents/tags)**_ are used to categorize errors to allow developers to correct a specific type of error (depending on expertize).
 * _**Incident state**_ can be used to search through other than new incidents.
 * _**[Context collections](../features/incidents/context-collections)**_ are telemetry data, either collected automatically by Coderr, or supplied by you.
 
@@ -123,11 +123,13 @@ Quick facts to the right in the right in the screenshot.
 
 Coderr automatically include which application version that the error was reported for, which environment (in this case "Production") and the tag, "backend", that we attached to the error report. 
 
+[Learn more about quick facts](../features/incidents/quickfacts/)
+
 ## Features used when reporting
 
 The following features were used when reporting the error.
 
-* [Tags](../features/incidents/tagging/) 
+* [Tags](../features/incidents/tags/) 
 * [Environment tracking](../features/incidents/environments/)
 * [Custom context data](../features/incidents/context-collections#Custom)
 
@@ -141,10 +143,10 @@ You are now in the analyze view which is designed to make it easy to accuratly a
 
 With analyze, you can:
 
-* [View geographic report origins](../analyze/)
-* [Browser error reports]()
-* [Read bug reports from users](../features/bug-reports/)
-* [Analyze business impact](../features/partitions/)
+* View geographic report origins
+* Browser error reports
+* Read bug reports from users
+* [Analyze business impact](/features/recommendations/)
 
 The context data ("Context collections") makes correcting bugs in production as easy as in development environments. No need to read bug reports from users or trying to find the relevant information in log files. Everything have been collected and packages for you.
 
@@ -174,6 +176,6 @@ Err.Configuration.ThrowExceptions = false;
 
 # Where to go next
 
-If you are using our commercial editions you might want to read about [recommendations](../features/discover/recommendations/) or [Insights](../features/insights).
+If you are using our commercial editions you might want to read about [recommendations](../features/recommendations/).
 
 Don't hesitate to [email us](mailto:help@coderr.io) if you need help. Our [Guides and support](https://coderr.io/guides-and-support/) is otherwise a perfect place to visit next.

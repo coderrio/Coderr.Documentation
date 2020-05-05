@@ -38,9 +38,9 @@ Err.Configuration.AddPartition(context =>
 });
 ```
 
-_(You can add [your own context collections](../../client/extending/context-provider/) to every report)_
+_(You can add [your own context collections](../../features/incidents/context-collections/) to every report)_
 
-# Improving suggestions
+# Improving recommendations
 
 ***You need to be an administrator to be able to make this configuration.***
 
@@ -50,15 +50,15 @@ Therefore, prioritization of incidents are made upon the known total (i.e. based
 
 If you would like to know see the impact based on the actual number of installations or users you need to go to the administration pages and specify those.
 
-1. Click on the cog in the top right menu<br>![](configure1.png)
-2. Make sure that the correct application is selected in the top left menu<br>![](configure2.png)
-3. Click on prioritization in the menu<br>![](configure3.png)
-4. Click on "Create new"<br> ![](configure4.png)
+1. Click on the cog in the top right menu<br>![](../../screens/features/recommendations/configure1.png)
+2. Make sure that the correct application is selected in the top left menu<br>![](../../screens/features/recommendations/configure2.png)
+3. Click on prioritization in the menu<br>![](../../screens/features/recommendations/configure3.png)
+4. Click on "Create new"<br> ![](../../screens/features/recommendations/configure4.png)
 
 Fill in the information about your partition.
 
 Here is a sample for users:
 
-![](configure5.png)
+![](../../screens/features/recommendations/configure5.png)
 
-Once done, try to report an exception and then click on "Suggestions" under the "Discover" menu.
+Once done, try to report an exception and then click on "Recommendations" under the "Discover" menu.

@@ -13,4 +13,4 @@ Now you should see the settings page.
 
 Browser notifications allows you browser to create OS notifications like:
 
-![](../../../screens/features/notifications/settings.png)
+![](../../../screens/features/notifications/browser_notification.png)

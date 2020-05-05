@@ -3,7 +3,7 @@ Creating a custom context provider
 
 Context providers are used to automatically attach information to each error report. The information is useful to determine why an exception have been thrown.
 
-![](../context-info.png)
+![](/screens/features/context/anonymous-object.png)
 
 To create a provider you need to create a class which implements the context provider interface. In the .NET standard library the interface is named `IContextCollectionProvider` and in .NET (4.x) it's named `IContextInfoProvider`.
 

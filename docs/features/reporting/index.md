@@ -8,7 +8,7 @@ In its simplest form reporting is done by using the `Err.Report(exception)` meth
 ```csharp
 try
 {
-    somelogic();
+    SomeLogic();
 }
 catch(SomeException ex)
 {
@@ -18,7 +18,7 @@ catch(SomeException ex)
 
 The exception should appear in your server instance shortly after being reported. If you click on it it will be available as follows:
 
-![](first-error.png)
+![](/screens/features/reporting/first-error.png)
 
 If you run the code multiple times you'll see that the "Report count" counter will increase, but you will not get multiple errors as you would have in a log file.
 
@@ -45,7 +45,7 @@ catch (Exception ex)
 }
 ```
 
-![](contextdata.png)
+![](/screens/features/reporting/forum-post.png)
 
 The second parameter supports the `dynamic` keyword and complex structures. 
 
@@ -58,13 +58,25 @@ catch (Exception ex)
 {
     Err.Report(ex, new
     {
-        User = new { Id = 5, LastName = "Perik" },
+        User = new
+        {
+            Id = 5,
+            LastName = "Perik",
+            Address = new
+            {
+                City = "Falun"
+            }
+        },
         Discount = new { Id = 4848 }
     });
 }
 ```
 
-# Adding multiple collections
+![](/screens/features/reporting/complex.png)
+
+# Adding multiple collections / Naming collections
+
+If you want to add multiple collections, or naming them, you need to use the `ContextCollectionDTO` as the second argument.
 
 It's possible to structure the attached data by passing an array of `ContextCollectionDTO` to the second argument:
 
@@ -87,7 +99,7 @@ catch (Exception ex)
 }
 ```
 
-![](collections.png)
+![](/screens/features/reporting/multiple-collections.png)
 
 To make that less cumbersome, Coderr is providing an extension method, `ToContextCollection()`.
 
@@ -124,8 +136,27 @@ catch (Exception ex)
 
 You can add `ErrTags" to any context collection and the server will automatically pick it up.
 
-# Attaching data with every report
+# Attaching data to exceptions
+
+Sometimes, you just want to rethrow exceptiosn instead of handling or reporting it.
+When doing so, it might help to attach more information.
+
+```csharp
+try
+{
+    // some example
+}
+catch (Exception ex)
+{
+    Ex.Data["Err.User"] = user;
+    throw;
+}
+```
+
+All data properties prefixed with  `Err.` will automatically be picked up by Coderr when the integration library kicks in to collect the exception.
+
+# Attaching data to every report
 
 You can also create context collections which will be automatically included with every reported error.
 
-[Read more](../client/extending/contextprovider/)
+[Read more](/client/extending/contextprovider/)

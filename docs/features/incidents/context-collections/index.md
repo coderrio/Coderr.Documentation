@@ -1,7 +1,7 @@
 Context collections
 ===================
 
-Context collections is part of the core in Coderr. These collections of telemetry data allows you to quickly and accuratly diagnose errors.
+Context collections is part of the core in Coderr. These collections of telemetry data allows you to quickly and accurately diagnose errors.
 Most of them are automatically generated when Coderr detects a new error. 
 
 ## Adding context data

@@ -23,7 +23,7 @@ Once the report limit have been reached (default 50 reports), Coderr will start 
 
 ## User Impact
 
-A partiion defined for this application. In this case, we have recieved this incident from one user, which is half of all users that we have recieved errors for in this application.
+A partition defined for this application. In this case, we have received this incident from one user, which is half of all users that we have received errors for in this application.
 
 ## Environments
 

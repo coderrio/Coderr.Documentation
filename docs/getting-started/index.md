@@ -117,7 +117,7 @@ The graph shows how frequently Coderr have received error reports for this incid
 Quick facts to the right in the right in the screenshot.
 
 * When the error was first detected by Coderr.
-* When the most recent report was recieved.
+* When the most recent report was received.
 * That the error only exists in production.
 * That we have only received reports for v1.0.1 of the application.
 

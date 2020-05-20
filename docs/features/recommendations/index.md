@@ -1,7 +1,7 @@
 Recommendations
 ===============
 
-Coderr can priortize your incidents and recommend the one that have the largest impact on your business.
+Coderr can prioritize your incidents and recommend the one that have the largest impact on your business.
 
 ![](../../screens/features/recommendations/recommended_partition.png)
 

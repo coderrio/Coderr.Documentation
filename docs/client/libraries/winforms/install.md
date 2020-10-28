@@ -29,7 +29,7 @@ public void YourButton_Click()
     }
     catch (Exception ex)
     {
-        _logger.Error("Testing Coderr", ex);
+        Err.Report(ex, someOptionalData);
     }
 }
 ```

@@ -58,5 +58,5 @@ The context collection will be shown as:
 # Links
 
 * [WinForms API reference](https://coderr.io/docs/api/client/winforms)
-* [Getting started guide](../../gettingstarted.md)
+* [Getting started guide](/gettingstarted/)
 * [Server installation](https://coderr.io/documentation/server/installation/)

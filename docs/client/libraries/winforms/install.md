@@ -44,4 +44,4 @@ Or display error pages like the one below?
 
 ![](winforms_error_all.png)
 
-If you want more information, read the [client documentation](index.md) or on error reporting [report errors manually](../../gettingstarted.md)
+If you want more information, read the [client documentation](index.md) or on error reporting [report errors manually](../../getting-started.md)

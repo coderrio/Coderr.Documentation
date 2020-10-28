@@ -7,7 +7,7 @@ The WinForms client library can help you display error pages and collect informa
 
 An error page is displayed when an exception is detected. It looks like this per default:
 
-![](winforms_error_minimal.png)
+![](/screens/libraries/winforms/winforms_error_minimal.png)
 
 You configure it by using the following properties:
 
@@ -19,13 +19,13 @@ Err.Configuration.UserInteraction.AskForEmailAddress = true;
 
 Examples:
 
-![all flags set](winforms_error_all.png)
+![all flags set](/screens/libraries/winforms/winforms_error_all.png)
 
-![only ask for permission](winforms_error_permission.png)
+![only ask for permission](/screens/libraries/winforms/winforms_error_permission.png)
 
-![only details](winforms_error_details.png)
+![only details](/screens/libraries/winforms/winforms_error_details.png)
 
-![only email](winforms_error_email.png)
+![only email](/screens/libraries/winforms/winforms_error_email.png)
 
 ## Context information
 
@@ -37,7 +37,7 @@ Coderr collects information from all open forms using reflection.
 
 The information includes all controls and their configuration (position, content, visibility etc)
 
-![Control content is included](winforms_open_forms.png)
+![Control content is included](/screens/libraries/winforms/winforms_open_forms.png)
 
 ### Screenshots
 
@@ -53,10 +53,10 @@ Err.Configuration.TakeScreenshots();
 
 The context collection will be shown as:
 
-![](winforms_screenshots.png)
+![](/screens/libraries/winforms/winforms_screenshots.png)
 
 # Links
 
 * [WinForms API reference](https://coderr.io/docs/api/client/winforms)
-* [Getting started guide](/gettingstarted/)
+* [Getting started guide](/getting-started/)
 * [Server installation](https://coderr.io/documentation/server/installation/)

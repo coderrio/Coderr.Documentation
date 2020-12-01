@@ -41,7 +41,7 @@ The information includes all controls and their configuration (position, content
 
 ### Screenshots
 
-Screnshots can be activated by one of the following configuration lines:
+Screenshots can be activated by one of the following configuration lines:
 
 ```csharp
 //only of the active form

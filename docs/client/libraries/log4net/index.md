@@ -36,7 +36,7 @@ catch (Exception ex)
 
 As a bonus you will also see information about the log entry in Coderr:
 
-![](contextinfo.png)
+![](/screens/libraries/log4net/contextinfo.png)
 
 # Links
 

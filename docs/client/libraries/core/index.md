@@ -13,43 +13,43 @@ There are  few built in context collections in the core library. Some are added 
 
 This collection includes information about your process. It contains information like used memory, thread count and ...
 
-![](collections/applicationinfo.png)
+![](/screens/libraries/core/applicationinfo.png)
 
 ### Assemblies
 
 All assemblies that have been loaded into the AppDomain.
 
-![](collections/assemblies.png)
+![](/screens/libraries/core//assemblies.png)
 
 ### Exception information
 
 Information from the exception, including all properties.
 
-![](collections/exception.png)
+![](/screens/libraries/core//exception.png)
 
 ### File versions
 
 File versions for all assemblies, as the assembly version might be the same while the file version is higher.
 
-![](collections/fileversions.png)
+![](/screens/libraries/core//fileversions.png)
 
 ### Operating system
 
 Operating system information
 
-![](collections/operatingsystem.png)
+![](/screens/libraries/core//operatingsystem.png)
 
 ### System information
 
 System information
 
-![](collections/systeminfo.png)
+![](/screens/libraries/core//systeminfo.png)
 
 ### Thread information
 
 Thread information like specified UI culture.
 
-![](collections/thread.png)
+![](/screens/libraries/core//thread.png)
 
 ## More information
 

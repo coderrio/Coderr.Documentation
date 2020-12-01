@@ -12,7 +12,7 @@ This page expects that you have installed the WPF nuget packaged and configured 
 
 An error page can optionally be displayed.  When a new error is detected, Coderr will now display this:
 
-![](../winforms/winforms_error_minimal.png)
+![](/screens/libraries/winforms/winforms_error_minimal.png)
 
 To activate and configure the feature, add the following line(s) below the other Coderr configuration lines in `app.xaml.cs`:
 
@@ -29,13 +29,13 @@ Err.Configuration.UserInteraction.AskForEmailAddress = true;
 
 Examples:
 
-![all flags set](../winforms/winforms_error_all.png)
+![all flags set](/screens/libraries/winforms/winforms_error_all.png)
 
-![only ask for permission](../winforms/winforms_error_permission.png)
+![only ask for permission](/screens/libraries/winforms/winforms_error_permission.png)
 
-![only details](../winforms/winforms_error_details.png)
+![only details](/screens/libraries/winforms/winforms_error_details.png)
 
-![only email](../winforms/winforms_error_email.png)
+![only email](/screens/libraries/winforms/winforms_error_email.png)
 
 ## WPF Error handling pipeline
 
@@ -57,7 +57,7 @@ Coderr collects information from all open forms using reflection.
 
 The information includes all controls and their configuration (position, content, visibility etc)
 
-![Control content is included](../winforms/winforms_open_forms.png)
+![Control content is included](/screens/libraries/wpf/winforms_open_forms.png)
 
 ### Screenshots
 
@@ -69,17 +69,17 @@ Err.Configuration.TakeScreenshots();
 
 You will see the following under the incident in your Coderr server:
 
-![](open_windows.png)
+![](/screens/libraries/wpf/open_windows.png)
 
 ### View models
 
 Coderr collects information from all viewModels in the open forms.
 
-![](viewmodels.png)
+![](/screens/libraries/wpf/viewmodels.png)
 
 
 # What to do next
 
-* [Getting started guide](../../gettingstarted.md) - Learn more about features in the client library
-* [Coderr Live](https://coderr.io/live/) - Read more about our hosted service.
-* [Server installation](https://coderr.io/documentation/server/installation/s) - How to install the Community Server (AGPL licensed)
+* [Getting started guide](/getting-started/) - Guide to quickly get started with Coderr.
+* [Coderr Cloud](https://coderr.io/try/cloud/) - Our cloud service.
+* [Server installation](https://coderr.io/documentation/server/installation/) - How to install the Community Server (AGPL licensed)

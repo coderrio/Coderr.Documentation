@@ -40,7 +40,7 @@ You can include your own views instead of the built in pages.
 
 Views should be named as the HTTP codes are defined in the `HttpStatusCode` enum in .NET and be placed in the `Views/Errors` folder.
 
-![](views-folder.png)
+![](/screens/libraries/aspnet-mvc5/views-folder.png)
 
 The `Error.cshtml` view is displayed if no other view matches.
 
@@ -111,7 +111,7 @@ The controller name is collected.
 
 Example:
 
-![](collections/controller.png)
+![](/screens/libraries/aspnet-mvc5/collections/controller.png)
 
 ### RouteData
 
@@ -119,7 +119,7 @@ Information about the route that MVC took is collected.
 
 Example:
 
-![](collections/routedata.png)
+![](/screens/libraries/aspnet-mvc5/collections/routedata.png)
 
 ### TempData
 
@@ -136,7 +136,7 @@ TempData["DemoKey"] = new {
 
 Result:
 
-![](collections/tempdata.png)
+![](/screens/libraries/aspnet-mvc5/collections/tempdata.png)
 
 ### ViewData / ViewBag
 
@@ -155,7 +155,7 @@ ViewBag.Model = new
 
 Result:
 
-![](collections/viewdata.png)
+![](/screens/libraries/aspnet-mvc5/collections/viewdata.png)
 
 
 # Links

@@ -5,7 +5,9 @@ Context providers are used to automatically attach information to each error rep
 
 ![](/screens/features/context/anonymous-object.png)
 
-To create a provider you need to create a class which implements the context provider interface. In the .NET standard library the interface is named `IContextCollectionProvider` and in .NET (4.x) it's named `IContextInfoProvider`.
+To create a provider you need to create a class which implements the context provider interface. In the .NET standard library the interface is named `IContextCollectionProvider`.
+
+Then register the provider using `Err.Configuration.ContextProviders.Add(new YourProvider());`.
 
 ## .NET Standard example
 
@@ -29,45 +31,22 @@ public class ViewBagProvider : IContextCollectionProvider
 }
 ```
 
-## .NET 4.x example
-
-Here is an example from ASP.NET MVC5:
-
-```csharp
-public class ViewBagProvider : IContextInfoProvider
-{
-    /// <inheritdoc />
-    public ContextCollectionDTO Collect(IErrorReporterContext context)
-    {
-        var aspNetContext = context as AspNetMvcContext;
-        if (aspNetContext?.ViewBag == null)
-            return null;
-
-        var converter = new ObjectToContextCollectionConverter();
-        var collection = converter.Convert(Name, aspNetContext.ViewBag);
-
-        //not beatiful, but we do not want to reflect the object twice
-        return collection.Properties.Count == 0 ? null : collection;
-    }
-
-    /// <summary>ViewBag</summary>
-    public string Name => "ViewBag";
-}
-```
-
 ## Getting information from the .NET library
 
 In most cases you need to be able to get information from your favorite .NET framework/library. For that Coderr provides a context that you can use to extract information.
 
-The context is different for each Coderr client library. Here is a list of all available contexts:
+The context is different for each Coderr client library. Here is a list of all available contexts.
 
 Client name | URL
 ----------- | ---------
-Base library | [Github link](https://github.com/coderrio/Coderr.Client/blob/master/src/Coderr.Client/Reporters/ErrorReporterContext.cs)
-ASPNET | [Github link](https://github.com/coderrio/Coderr.Client.AspNet/blob/master/src/Coderr.Client.AspNet/HttpErrorReporterContext.cs)
-ASPNET MVC5 | [Github link](https://github.com/coderrio/Coderr.Client.AspNet.Mvc5/blob/master/src/Coderr.Client.AspNet.Mvc5/AspNetMvcContext.cs)
-WPF | [Github link](https://github.com/coderrio/Coderr.Client.WPF/blob/master/src/Coderr.Client.Wpf/WpfErrorReporter.cs)
-WinForms | [Github link](https://github.com/coderrio/Coderr.Client.WinForms/blob/master/src/Coderr.Client.WinForms/WinformsErrorReportContext.cs)
+Base library | `if (context is ErrorReporterContext errorContext) ....`
+ASPNET | `if (context is HttpErrorReporterContext httpContext) ....`
+ASPNET MVC5 | `if (context is AspNetMvcContext aspNetContext) ....`
+ASPNET Core | `if (context is MvcCoreErrorContext mvcContext) ....`
+WPF | `if (context is WpfErrorReporter wpfContext) ....`
+WinForms | `if (context is WinformsErrorReportContext winFormsContext) ....`
+
+The `if` is required if you are using multiple libraries in your application, since errors will then run through different Coderr pipelines.
 
 # Conventions
 

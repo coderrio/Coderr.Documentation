@@ -7,9 +7,7 @@ This library will report all unhandled ASP.NET and MVC exceptions. It can also r
 
 # Prerequisites
 
-* You need to have created an account at [Coderr Live](https://lobby.coderr.io) or installed one of our local servers.
-* You should also have installed and configured the ASP.NET Core MVC [nuget library](https://www.nuget.org/packages/Coderr.Client.AspNetCore.Mvc/).
-* If you need help installing the nuget package, read our [installation guide](./install/).
+You should also have installed and configured the ASP.NET Core MVC [nuget library](https://www.nuget.org/packages/Coderr.Client.AspNetCore.Mvc/).
 
 
 # Customization options

@@ -14,6 +14,29 @@ Then register the provider using `Err.Configuration.ContextProviders.Add(new You
 Here is a sample for .NET Core MVC:
 
 ```csharp
+public class SampleProvider : IContextCollectionProvider
+{
+    /// <inheritdoc />
+    public ContextCollectionDTO Collect(IErrorReporterContext context)
+    {
+        if (!(context is MvcCoreErrorContext aspNetContext) || aspNetContext.ViewBag == null)
+            return null;
+
+        var properties = new Dictionary<string,string>();
+        properties["CurrentUser"] = Thread.CurrentPrincipal.Identity.Name;
+        properties["ErrTags"] = "fatal";
+
+        return new ContextInfoCollection(Name, properties);
+    }
+
+    /// <inheritdoc />
+    public string Name => "MyData";
+}
+```
+
+There is also a helper class which can convert .NET objects into context collections:
+
+```csharp
 public class ViewBagProvider : IContextCollectionProvider
 {
     /// <inheritdoc />

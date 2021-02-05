@@ -14,3 +14,10 @@ Now you should see the settings page.
 Browser notifications allows you browser to create OS notifications like:
 
 ![](../../../screens/features/notifications/browser_notification.png)
+
+
+# Escalation of incidents
+
+As seen in the settings, incidents can be escalated to important and critical. It's done based on your own criterias like number of affected users or servers.
+
+[Incident recommendations](../../recommendations)

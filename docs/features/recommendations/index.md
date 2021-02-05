@@ -14,14 +14,17 @@ To enable insights, use the `AddPartition` method in the client library to defin
 Err.Configuration.AddPartition(context => 
 {
   // See how many installations are affected
-  context.AddPartition("Installations", ConfigurationManager.AppSetting["InstallationId"]);
+  context.AddPartition("InstallationId", ConfigurationManager.AppSetting["InstallationId"]);
 
   // See number of affected users
-  context.AddPartition("Users", Thread.CurrentPrincipal.Identity.Name);
+  context.AddPartition("UserId", Thread.CurrentPrincipal.Identity.Name);
+
+  // See number of affected servers
+  context.AddPartition("ServerId", Environment.MachineName);
 });
 ```
 
-The `context` parameter gives access to all collected data.
+The `context` parameter gives access to all collected data in the error report.
 
 ```csharp
 Err.Configuration.AddPartition(context =>
@@ -62,3 +65,19 @@ Here is a sample for users:
 ![](../../screens/features/recommendations/configure5.png)
 
 Once done, try to report an exception and then click on "Recommendations" under the "Discover" menu.
+
+# Error escalation
+
+Incidents in Coderr have three different escalation levels. Normal, Important and Critical.
+
+* Normal incidents are priortized by getting points with the help of the above configured partitions
+* Important incidents will also be priortized above normal incidents.
+* Critical incidents will always be prioritized above important incidents.
+
+# Receiving notifications
+
+Coderr can notify you using email or push notifications when incidents are escalated to important or critical.
+
+To configure notifications, press the user icon top right in the Coderr UI.
+
+[Read more about notifications](../incidents/notifications)

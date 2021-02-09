@@ -59,8 +59,8 @@ Once that is done, the report is ready to upload.
 
 ## 4. Upload the report
 
-Reports should be uploaded to `https://yourserver/coderr/receiver/report/{apiKey}/?sig={signature}`, where `{apiKey}` should be replaced with the API-key defined in the Coderr UI, and `{signature}` is replaced with the generated hash. 
-For Coderr Cloud the URI should be `https://report.coderr.io/receiver/report/{apiKey}/?sig={signature}`.
+Reports should be uploaded to "`https://yourserver/coderr/receiver/report/{apiKey}/?sig={signature}`", where "`{apiKey}`" should be replaced with the API-key defined in the Coderr UI, and "`{signature}`" is replaced with the generated hash. 
+For Coderr Cloud the URI should be "`https://report.coderr.io/receiver/report/{apiKey}/?sig={signature}`".
 
 # Example report
 
@@ -99,19 +99,19 @@ This is a minimal error report:
 
 # Controlling Coderr
 
-You can control different features in Coderr by specifying different keys in a special context collection named `CoderrData´.
+You can control different features in Coderr by specifying different keys in a special context collection named "`CoderrData`".
 
 The following configuration options are simply key/values in that collection.
 
 ## Tags
 
-You can categorize errors by using [tags](/features/incidents/tags). To include tags, add a key to the collection named `ErrTags`. It's value should be a comma-separated list, for instance `important,backend`.
+You can categorize errors by using [tags](/features/incidents/tags). To include tags, add a key to the collection named "`ErrTags`". It's value should be a comma-separated list, for instance "`important,backend`".
 
 ### Example
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",
@@ -125,13 +125,13 @@ You can categorize errors by using [tags](/features/incidents/tags). To include 
 
 ## Position
 
-Sometimes, errors only occur in a specific geographic region. Coderr tracks locations by converting the IP address to a location, but you can also override that behavior by including `Longitude` and `Latitude` in the collection.
+Sometimes, errors only occur in a specific geographic region. Coderr tracks locations by converting the IP address to a location, but you can also override that behavior by including "`Longitude`" and "`Latitude`" in the collection.
 
 ### Example
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",
@@ -153,7 +153,7 @@ It therefore makes sense to track which application versions that an error exist
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",
@@ -170,7 +170,7 @@ It therefore makes sense to track which application versions that an error exist
 Coderr can prioritize errors based on the actual affect on your business.
 That's done by providing metrics. For instance, if number of affected users is the most important metric, attach the user id.
 
-For partitions, they should be prefixed with `ErrPartition.`.
+For partitions, they should be prefixed with "`ErrPartition.`".
 
 Try to keep the values as short as possible in high load systems.
 
@@ -178,7 +178,7 @@ Try to keep the values as short as possible in high load systems.
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",
@@ -194,11 +194,11 @@ Try to keep the values as short as possible in high load systems.
 
 You can override Coderr's algorithm which identifies unique errors by providing your own identifier.
 
-That's done by providing the `HashSource` key in the collection. To Coderr, the string is considered opaque, but must be the same for all error reports that are for the same error.
+That's done by providing the "`HashSource`" key in the collection. To Coderr, the string is considered opaque, but must be the same for all error reports that are for the same error.
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",
@@ -214,11 +214,11 @@ That's done by providing the `HashSource` key in the collection. To Coderr, the 
 
 Coderr have a related errors feature that can be used to navigate a set of errors that are related.
 
-That's done with the help of the `CorrelationId` key. It must be the same for all errors that are related.
+That's done with the help of the "`CorrelationId`" key. It must be the same for all errors that are related.
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",
@@ -236,11 +236,11 @@ When you look at an error in the Coderr UI, there is a quick-fact pane to the ri
 
 You can attach information that should be visible in that box. Do note that all values will be added to the key. If you report 500 errors which all have different values, the quick fact box will be filled with all 500 values.
 
-Quick-facts should be prefixed with `QuickFact.`.
+Quick-facts should be prefixed with "`QuickFact.`".
 
 ```javascript
 {
-    // all other report keys
+    // [.. the rest of the JSON document ..]
     "ContextCollections": {
         {
             "Name": "CoderrData",

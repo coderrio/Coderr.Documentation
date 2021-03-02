@@ -6,7 +6,7 @@ Installation of Coderr Community
 Coderr is now built using ASP.NET Core MVC. Make sure that you have installed the .NET Core Hosting Bundle on your web server.
 
 1. Go to https://www.microsoft.com/net/download/all
-2. Click on a .NET Core version, for instance <code>.NET Core 2.1</code>
+2. Click on a .NET Core version, <code>.NET Core 2.2</code>
 3. Find the **"Runtime & Hosting Bundle"** under "Run apps - Runtime"
 4. Download and install it.
 5. Stop IIS, run "net stop was /y" from a command prompt
@@ -46,6 +46,22 @@ Upgrade from an earlier version of Coderr.
 8. Close `appsettings.json`
 9. Coderr should now work.
 
-## Trouble?
+## Common errors
+
+* Did not install the correct .NET Hosting Bundle
+* Did not restart iis (and if that did work the server) after installing the .NET Core Hosting Bundle
+* The IIS account do not have permissions to your database.
+
+## Troubleshooting
+
+The most common reason to Coderr not starting is that the IIS configuration is incorrect. Do the following to troubleshoot it.
+
+1. Open `web.config` and change `stdoutLogEnabled` to `true`.
+2. Change `stdoutLogFile` to a log path, i.e. `C:\logs`.
+3. Give `IIS_IUSRS` "Change" permissions on the log folder.
+4. Try to start coderr
+5. Log in the log.
+
+## Need help?
 
 Either write a post in our [Community forum](https://discuss.coderr.io/) or just write us an [email](mailto:help@coderr.io).

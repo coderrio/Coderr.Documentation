@@ -1,26 +1,28 @@
-Incidents
-===========
+Error
+=====
 
-An incident is an unique error, a group of error reports for the same error. The error can either be an exception or a violation of your non-functional requirements.
+An error in Coderr is a distinct entity generated from one or more error reports in your application. A single error can be reported millions of times (and is for a few of our customers).
 
-## How Coderr determines what is an new error or not.
+The error can either be an exception or a violation of your non-functional requirements. Errors can either be reported by you, your favorite logging library, or by one of our integration libraries.
 
-Coderr uses different methods to determine what's an unique error.
+## How Coderr determines what is a new error or not.
 
-The most basic approach is to use the stack trace and the error type to group reports together. The method do although differ depending on the error type and the client library that reported the error.
+Coderr uses different methods to determine what's a unique error.
+
+The most basic approach is to use the stack trace and the error type to group reports together. The method does differ depending on the error type and the client library that reported the error.
 
 ## Customizing incidents
 
-You can override Coderr's default method of grouping errors together. In that way, all errors that have the same _hash source_ will be grouped together. It doesn't matter if they are reported in the same or in different classes.
+You can override Coderr's default method of grouping error reports together. In that way, all errors with the same _hash source_ are grouped into a single error. You can use the same hash source from multiple places in your code, and the error reports still appear under the same error.
 
 ### Using a context provider
 
-Do do that you can either include a property called `HashSource` in the `CoderrData` collection in a context data provider:
+To do that, you can either include a property called `HashSource` in the `CoderrData` collection in a context data provider:
 
 ```csharp
 public class ProcessorProvider : IContextInfoProvider
 {
-    // No need to provide a name since we will not add a new collection to the error report.
+    // No need to provide a name since we do not add a new collection to the error report.
     public string Name => "NoNameRequired";
 
     public ContextCollectionDTO Collect(IErrorReporterContext context)

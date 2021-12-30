@@ -5,29 +5,27 @@ Quick facts
 
 ## Created
 
-When Coderr received the first error report for this incident.
+When Coderr received the first report of this error.
 
 ## Last report
 
-When we received the most recent report.
-This date/time can differ from the date on the most recently stored report (due to report limiting, see below).
+Timestamp for the most recent report.
+This date/time can differ from the date on the most recently stored report (due to report limiting/throttling, see below).
 
 ## Report count
 
-The report count shows the total amount of error reports received since this incident was first discovered.
-Do note that this report count can be much higher than the amount of reports available under the report browser.
+The report count shows the number of reports received since this error was discovered.
+Note that this count can be higher than the reports available under the report browser. For example, the report count can show 143 000 reports, while only 50 are available under the report browser. This is because we limit the number of saved reports to reduce the resources required for each error.
 
-The report count can show 143 000 reports while only 50 are available under the report browser. We limit the number of saved reports to lower amount of resources required for each incident.
-
-Once the report limit have been reached (default 50 reports), Coderr will start to delete the oldest reports to be able to save newer ones (i.e. more recent data).
+Coderr starts to delete the oldest reports to save newer ones once the limit has been reached (default is 50 reports).
 
 ## User Impact
 
-A partition defined for this application. In this case, we have received this incident from one user, which is half of all users that we have received errors for in this application.
+A partition defined for this application. In this case, we have received this incident from one user, which is half of all users that have experienced errors in this application.
 
 ## Environments
 
-Which application environments, like test, dev and production that this incident was received from.
+Defines which application environments this error has been received from, For instance, test, development, and production.
 
 ## Tags
 

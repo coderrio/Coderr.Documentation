@@ -1,11 +1,9 @@
 Environment tracking
 ====================
 
-Having Coderr activated in all environments can generate a lot of errors which will be corrected without the help of Coderr.
+Having Coderr activated in all environments generates errors which already is corrected without the help of Coderr, especially in your development environment.
 
-We therefore allow you to track in which environment the errors have been detected in.
-
-In that way you can delete all errors which have been found in a single environment.
+Coderr allows you to track in which environment the errors have been detected. You can both automatically discard errors in a specific environment, or simply just reset it.
 
 ![](../../../screens/features/environments/quickfacts.png)
 

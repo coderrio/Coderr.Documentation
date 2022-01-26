@@ -1,4 +1,4 @@
-WPF client library
+WPF library
 ==================
 
 The WPF client library handles unhandled exceptions, includes your view models and can help you display error pages and take screenshot of the active window.

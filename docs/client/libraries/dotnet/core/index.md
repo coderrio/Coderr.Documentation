@@ -1,4 +1,4 @@
-Core library
+Reporting library
 ============
 
 This library is the foundation of all exception reporting done with Coderr. All other client libraries use this one to report errors.

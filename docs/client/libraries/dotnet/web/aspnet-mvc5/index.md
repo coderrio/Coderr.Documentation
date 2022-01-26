@@ -1,5 +1,5 @@
-ASP.NET MVC 5 Integration
-=========================
+ASP.NET MVC 5
+=============
 
 This client library will provide both ASP.NET and MVC with specific context information for Coderr.
 

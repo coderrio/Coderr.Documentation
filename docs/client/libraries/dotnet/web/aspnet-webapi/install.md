@@ -1,11 +1,11 @@
-ASP.NET MVC 5 installation
+ASP.NET WebApi installation
 ===========================
 
-Install the nuget package called `coderr.client.aspnet.mvc5`, if you haven't already.
+Install the nuget package called `coderr.client.aspnet.webapi`.
 
 Next, you need to tell the Coderr library what server it should upload all error reports to.
 
-PLease add the following code in your `global.asax` or `Startup.cs`.
+Add the following code in your `global.asax` or `Startup.cs`.
 
 ```csharp
 var url = new Uri("http://yourServer/coderr/");
@@ -17,7 +17,7 @@ Err.Configuration.Credentials(url,
 To get automated error reporting, add the following:
 
 ```csharp
-Err.Configuration.CatchMvcExceptions();
+Err.Configuration.CatchWebApiExceptions();
 ```
 
 Once configured, start your application and try manually to report an exception.
@@ -37,6 +37,6 @@ catch (Exception ex)
 
 ## More information
 
-The MVC library can report all invalid model states, track failed login attempts and more.
+The WebApi library can report all invalid model states, track failed login attempts and more.
 
-If you want more information, read the  [ASP.NET Mvc5 client documentation](index.md) or on error reporting  [report errors](../../gettingstarted.md)
+If you want more information, read the  [ASP.NET WebApi documentation](index.md) or on error reporting  [report errors](../../gettingstarted.md)

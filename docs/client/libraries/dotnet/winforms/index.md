@@ -1,4 +1,4 @@
-WinForms client library
+WinForms library
 ==========================
 
 The WinForms client library can help you display error pages and collect information about the open forms.

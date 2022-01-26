@@ -1,9 +1,11 @@
 ASP.NET Core MVC configuration
 ==============================
 
-Install the nuget package called `coderr.client.aspnetcore.mvc`.
+This installation guide only activates the minimal amount of features, read the full guide at the bottom for more details.
 
-Next, you need to tell the Coderr library what server it should upload all error reports to.
+Install the nuget package called `coderr.client.aspnetcore.mvc`..
+
+## Activating Coderr
 
 Add the following code in your `Program.cs`:
 
@@ -16,15 +18,20 @@ Err.Configuration.Credentials(url,
 
 The appKey and the sharedSecret are found in the Coderr server under the managed application.
 
+## Detecting errors
+
 To get Coderr to automatically report all unhandled exceptions add the following in `Startup.cs`:
 
-For Middleware errors:
+For Middleware errors, add the following to the `Configure` method:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
     // to catch errors that are not in the MVC pipeline
     app.CatchMiddlewareExceptions();
+
+    // To get ASP.NET Cores logs attached:
+    loggerFactory.AddCoderrProvider();
 
     // [... rest of the code ...]
 }
@@ -35,14 +42,16 @@ For MVC specific errors:
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
+    // For newer versions, this method is named "AddControllersWithViews".
     services.AddMvc(options =>
     {
-        // for Coderr
+        // To activate Coderr
         options.CatchMvcExceptions();
     });
 }
 ```
 
+## Trying it out
 Once configured, start your application and try manually to report an exception.
 
 You can test by adding the following code in a controller action:

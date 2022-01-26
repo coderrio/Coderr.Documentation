@@ -1,4 +1,4 @@
-Core configuration instructions
+Base library configuration
 ===========================
 
 Install the nuget package called `coderr.client`.
@@ -14,7 +14,7 @@ Err.Configuration.Credentials(url,
                               "yourSharedSecret");
 ```
 
-The appKey and the sharedSecret can be found in the Coderr server.
+The appKey and the sharedSecret is available in the Coderr server.
 
 Once configured, start your application and try manually to report an exception.
 

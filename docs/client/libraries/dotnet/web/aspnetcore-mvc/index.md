@@ -35,7 +35,7 @@ var maxTime = TimeSpan.FromMilliseconds(500);
 Err.Configuration.TrackSlowRequests(maxTime);
 ```
 
-![](slow-request-incident.png)
+![](/screens/libraries/aspnetcore-mvc/slow-request-incident.png)
 
 ## Tracking authentication failures
 
@@ -49,7 +49,7 @@ Err.Configuration.TrackAuthenticationFailures();
 
 The example below shows an authentication failure:
 
-![](authentication-incident.png)
+![](/screens/libraries/aspnetcore-mvc/authentication-incident.png)
 
 
 ## Reporting javascript errors
@@ -64,7 +64,7 @@ Activate this feature by including the built in script in your `_Layout.cshtml` 
 
 All unhandled javascript errors are now reported to Coderr, as follows:
 
-![](javascript-incident.png)
+![](/screens/libraries/aspnetcore-mvc/javascript-incident.png)
 
 ### Javascript context collections
 

@@ -80,7 +80,7 @@ coderr.config.applicationVersion = "1.0";
 ### Environment
 
 Errors during development are normally not necessary to track in Coderr, as you probably are aware of most of them.
-To turn reporting off in some environments, you need to tell Coderr which environment the errors are from.
+To turn reporting off in some environments, you need to tell Coderr which environment errors are from.
 
 ```javascript
 import {config} from "coderr.client";
@@ -90,7 +90,7 @@ config.environmentName = 'Development';
 
 Once one error has been reported, mute the environment in the Coderr UI (under application settings).
 
-### Pre process error reports
+### Pre-process error reports
 
 Sometimes additional information has to be added to error reports (session data, tags, priority etc). Hook into the error reporting pipeline to do that.
 

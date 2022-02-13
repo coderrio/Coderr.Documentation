@@ -10,14 +10,14 @@ Read the [installation guide](installation.md) for help installing the library.
 Once you have installed and configured the reporting library you can start reporting errors.
 
 ```javascript
-import * as coderr from "coderr.client";
+import { err } from "coderr.client";
 
 try {
 
     // do something
 
 } catch(e) {
-    coderr.report(e, { userId: 20});
+    err.report(e, { userId: 20});
 }
 
 ``` 
@@ -34,15 +34,15 @@ The type of information attached to an error report depends on the type of error
 As shown above, the second argument is used to attach data to error reports. Any type of information can be included.
 
 ```javascript
-coderr.report(e, { userId: 20, address: { city: 'Falun' }});
+err.report(e, { userId: 20, address: { city: 'Falun' }});
 ``` 
 
-![](/screens/libraries/js/core/complex-data.gif)
+![](/screens/libraries/js/core/complex-data.png)
 
 To include multiple sets of data, simply attach them as an array:
 
 ```javascript
-coderr.report(e, [userInfo, orderInfo]);
+err.report(e, [userInfo, orderInfo]);
 ``` 
 
 However, make it easier to navigate data, format the sets of data as our own context collection structure:
@@ -54,10 +54,10 @@ var collection  = {
         someName: 'someValue'
     }
 }
-coderr.report(e, collection);
+err.report(e, collection);
 ```
 
-![](/screens/libraries/js/core/some-collection.gif)
+![](/screens/libraries/js/core/some-collection.png)
 
 ## Automated reporting
 
@@ -65,30 +65,30 @@ Coderr can attach more telemetry and make the reporting automated. For that, you
 
 ## Configuration
 
-You can adjust how Coderr handles errors. It's done with the help of the configuration object.
+You can adjust how Coderr handles errors. Use the configuration object to do so.
 
 ### Application version
 
 Specify the application version in the error reports. By doing so, Coderr can ignore reports for errors that have been corrected in newer versions.
 
 ```javascript
-import {config} from "coderr.client";
+import { err } from "coderr.client";
 
-coderr.config.applicationVersion = "1.0";
+err.configuration.applicationVersion = "1.0";
 ```
 
 ### Environment
 
 Errors during development are normally not necessary to track in Coderr, as you probably are aware of most of them.
-To turn reporting off in some environments, you need to tell Coderr which environment errors are from.
+To mute reporting in some environments, you need to tell Coderr which environment errors are from.
 
 ```javascript
-import {config} from "coderr.client";
+import { err } from "coderr.client";
 
-config.environmentName = 'Development';
+err.configuration.environmentName = 'Development';
 ```
 
-Once one error has been reported, mute the environment in the Coderr UI (under application settings).
+Once an error has been reported, mute the environment in the Coderr UI (under application settings).
 
 ### Pre-process error reports
 
@@ -96,10 +96,10 @@ Sometimes additional information has to be added to error reports (session data,
 
 Another typical use case is to remove sensitive data from the telemetry.
 
-```csharp
-import {config} from "coderr.client";
+```javascript
+import { err } from "coderr.client";
 
-config.errorPreProcessor = context => {
+err.configuration.errorPreProcessor = context => {
     // just an example
     if (context.contextType == "DOM") {
         context.logEntries = browserLogger.entries;
@@ -114,7 +114,7 @@ You can prevent reports from being uploaded to Coderr.
 ```javascript
 import {config} from "coderr.client";
 
-config.filter.push({
+err.configuration.filter.push({
     invoke(context: ReportFilterContext){
         if (context.report.Exception.Message === 'Hello'){
             context.canSubmitReport = false;
@@ -127,8 +127,10 @@ config.filter.push({
 
 You can add telemetry to all generated reports:
 
-```csharp
-config.providers.push({
+```javascript
+import { err } from "coderr.client";
+
+err.configuration.providers.push({
     collect(context: coderr.contextCollections.IContextCollectionProviderContext){
         context.contextCollections.push({
             name: 'SomeInfo',

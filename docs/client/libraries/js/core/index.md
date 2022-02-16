@@ -3,7 +3,7 @@ Javascript library
 
 This library supports both browser (es6) and nodejs based applications. It can easily be compiled into IIFE to support older browsers too.
 
-Read the [installation guide](installation.md) for help installing the library.
+Read the [installation guide](install.md) for help installing the library.
 
 ## Basic reporting
 

@@ -37,7 +37,7 @@ As shown above, the second argument is used to attach data to error reports. Any
 err.report(e, { userId: 20, address: { city: 'Falun' }});
 ``` 
 
-![](/screens/libraries/js/core/complex-data.png)
+![](/screens/libraries/js/core/complex_data.png)
 
 To include multiple sets of data, simply attach them as an array:
 
@@ -57,7 +57,7 @@ var collection  = {
 err.report(e, collection);
 ```
 
-![](/screens/libraries/js/core/some-collection.png)
+![](/screens/libraries/js/core/some_collection.png)
 
 ## Automated reporting
 
